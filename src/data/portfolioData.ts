@@ -298,7 +298,7 @@ export const PORTFOLIO_DATA = {
         "Exportable audit logs for administrative accountability"
       ],
       status: "Architecture / Concept",
-      githubUrl: "https://github.com/divakarsingaravelu",
+      githubUrl: "https://github.com/Divakarsingaravelu/hostel-outpass-system",
       liveUrl: undefined,
       imagePlaceholderGradient: "from-blue-600/30 via-indigo-600/20 to-cyan-700/20",
       featured: false,
@@ -324,7 +324,7 @@ export const PORTFOLIO_DATA = {
         "Strictly genuine data presentation with verified links and no simulated claims"
       ],
       status: "Completed",
-      githubUrl: "https://github.com/divakarsingaravelu",
+      githubUrl: "https://github.com/Divakarsingaravelu/portfolio-zerog",
       liveUrl: "#",
       imagePlaceholderGradient: "from-cyan-500/30 via-violet-600/20 to-purple-800/30",
       featured: false,
