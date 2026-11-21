@@ -52,7 +52,7 @@ export const StarfieldCanvas: React.FC = () => {
 
     const colors = [
       'rgba(0, 240, 255, ',    // Cyan
-      'rgba(139, 92, 246, ',   // Violet
+      'rgba(59, 130, 246, ',   // Blue
       'rgba(255, 255, 255, ',   // White
       'rgba(56, 189, 248, ',   // Sky blue
     ];
@@ -110,44 +110,37 @@ export const StarfieldCanvas: React.FC = () => {
         height * 0.7,
         width * 0.5
       );
-      grad2.addColorStop(0, 'rgba(112, 0, 255, 0.045)');
+      grad2.addColorStop(0, 'rgba(59, 130, 246, 0.04)');
       grad2.addColorStop(1, 'rgba(6, 7, 11, 0)');
       ctx.fillStyle = grad2;
       ctx.fillRect(0, 0, width, height);
 
-      // Draw and update particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
         if (isZeroG) {
-          // Zero-G smooth orbital drift
           p.x += p.vx + Math.sin(time + i) * 0.15;
           p.y += p.vy + Math.cos(time + i) * 0.15;
 
-          // Wrap around edges
           if (p.x < 0) p.x = width;
           if (p.x > width) p.x = 0;
           if (p.y < 0) p.y = height;
           if (p.y > height) p.y = 0;
         } else {
-          // Gravity mode: particles have weight and fall downward
-          p.vy += 0.06; // Gravity acceleration
+          p.vy += 0.06;
           p.x += p.vx;
           p.y += p.vy;
 
-          // Bounce off floor
           if (p.y + p.size >= height) {
             p.y = height - p.size;
-            p.vy = -p.vy * 0.65; // restitution
-            p.vx *= 0.95;       // friction
+            p.vy = -p.vy * 0.65;
+            p.vx *= 0.95;
           }
-          // Bounce off walls
           if (p.x <= 0 || p.x >= width) {
             p.vx = -p.vx * 0.8;
           }
         }
 
-        // Mouse repulsion
         const dx = mouseRef.current.x - p.x;
         const dy = mouseRef.current.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
@@ -159,20 +152,17 @@ export const StarfieldCanvas: React.FC = () => {
           p.y -= Math.sin(angle) * force;
         }
 
-        // Twinkle
         p.alpha = p.baseAlpha + Math.sin(time * 2 + i) * 0.2;
         p.alpha = Math.max(0.1, Math.min(1, p.alpha));
 
-        // Draw star
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `${p.color}${p.alpha})`;
         ctx.shadowBlur = p.size > 2 ? 8 : 4;
-        ctx.shadowColor = p.color.includes('240') ? '#00F0FF' : '#7000FF';
+        ctx.shadowColor = p.color.includes('240') ? '#00F0FF' : '#3B82F6';
         ctx.fill();
         ctx.shadowBlur = 0;
 
-        // Faint constellation links for closest neighbors
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dist2 = Math.hypot(p.x - p2.x, p.y - p2.y);
