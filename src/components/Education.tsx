@@ -10,8 +10,8 @@ export const Education: React.FC = () => {
   const { education } = PORTFOLIO_DATA;
 
   return (
-    <section id="education" className="relative py-28 scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="education" className="relative py-[var(--space-12)] scroll-mt-[var(--space-3)]">
+      <div className="max-w-7xl mx-auto px-[var(--space-2)] sm:px-[var(--space-3)] lg:px-[var(--space-4)] relative z-10">
         
         {/* Header */}
         <motion.div
@@ -19,28 +19,28 @@ export const Education: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-16 space-y-4"
+          className="flex flex-col items-center text-center mb-[var(--space-8)] gap-[var(--space-2)]"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-space-800/80 border border-cyan-500/30 text-cyan-glow text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+          <div className="inline-flex items-center gap-[var(--space-half)] px-[var(--space-2)] py-[var(--space-half)] rounded-full bg-space-800/80 border border-cyan-500/30 text-cyan-glow text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(0,240,255,0.15)]">
             <GraduationCap className="w-3.5 h-3.5" />
-            <span>ACADEMIC & PROFESSIONAL PATHWAY</span>
+            <span>EDUCATION</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
-            Education & <span className="text-gradient-cyan">Training</span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.125]">
+            Education
           </h2>
 
-          <p className="text-slate-400 font-mono text-xs sm:text-sm max-w-xl leading-relaxed">
-            My formal engineering foundation and intensive software development credentials.
+          <p className="text-slate-400 font-mono text-xs sm:text-sm max-w-xl leading-[24px]">
+            My engineering degree and software development training.
           </p>
         </motion.div>
 
         {/* Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Glowing Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[2px] bg-gradient-to-b from-cyan-glow via-violet-500 to-transparent opacity-40" />
+          {/* Vertical Timeline Line */}
+          <div className="hidden md:block absolute left-1/2 top-[var(--space-2)] bottom-[var(--space-2)] -translate-x-1/2 w-[2px] bg-gradient-to-b from-cyan-glow via-blue-500 to-transparent opacity-40" />
 
-          <div className="space-y-12">
+          <div className="space-y-[var(--space-6)]">
             {education.map((item, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -54,69 +54,68 @@ export const Education: React.FC = () => {
                     isEven ? 'md:flex-row-reverse' : ''
                   }`}
                 >
-                  {/* Central Node Orb */}
-                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-space-950 border-2 border-cyan-glow items-center justify-center z-20 shadow-[0_0_15px_rgba(0,240,255,0.6)]">
+                  {/* Central Node */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-[var(--space-4)] h-[var(--space-4)] rounded-full bg-space-950 border-2 border-cyan-glow items-center justify-center z-20 shadow-[0_0_15px_rgba(0,240,255,0.6)]">
                     <span className="w-2.5 h-2.5 rounded-full bg-cyan-glow" />
                   </div>
 
-                  {/* Spacer for 50% width on desktop */}
                   <div className="hidden md:block w-1/2" />
 
-                  {/* Content Card with TiltCard */}
-                  <div className="w-full md:w-1/2 md:px-8">
+                  {/* Content Card */}
+                  <div className="w-full md:w-1/2 md:px-[var(--space-4)]">
                     <TiltCard
                       maxTilt={6}
-                      glowColor={isEven ? 'rgba(0, 240, 255, 0.15)' : 'rgba(139, 92, 246, 0.15)'}
+                      glowColor="rgba(0, 240, 255, 0.15)"
                       enableZeroGFloat={isZeroG}
                       floatDelay={index * 0.4}
-                      className="glass-card rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-cyan-500/40 bg-space-950/85 backdrop-blur-xl relative overflow-hidden transition-all duration-300 shadow-xl"
+                      className="glass-card rounded-2xl p-[var(--space-3)] sm:p-[var(--space-4)] border border-white/10 hover:border-cyan-500/40 bg-space-950/85 backdrop-blur-xl relative overflow-hidden transition-all duration-300 shadow-xl"
                     >
                       {/* Top Header */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-cyan-950/60 border border-cyan-500/30 text-cyan-glow text-xs font-mono">
+                      <div className="flex flex-wrap items-center justify-between gap-[var(--space-1)] mb-[var(--space-1)]">
+                        <span className="inline-flex items-center gap-[var(--space-half)] px-[var(--space-1)] py-[var(--space-half)] rounded-md bg-cyan-950/60 border border-cyan-500/30 text-cyan-glow text-xs font-mono">
                           <Calendar className="w-3 h-3" />
                           {item.period}
                         </span>
 
-                        <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-violet-950/60 border border-violet-500/30 text-violet-300">
+                        <span className="px-[var(--space-1)] py-[var(--space-half)] rounded-full text-xs font-mono bg-blue-950/60 border border-blue-500/30 text-blue-300">
                           {item.status}
                         </span>
                       </div>
 
                       {/* Degree Title */}
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-1 leading-snug tracking-tight">
+                      <h3 className="text-lg sm:text-xl font-bold text-white mb-[var(--space-half)] leading-[24px] tracking-tight">
                         {item.degree}
                       </h3>
 
                       {/* Institution */}
-                      <div className="text-cyan-glow/90 font-mono text-sm font-medium mb-1">
+                      <div className="text-cyan-glow/90 font-mono text-sm font-medium mb-[var(--space-half)]">
                         {item.institution}
                       </div>
 
                       {item.affiliate && (
-                        <div className="text-slate-400 text-xs font-mono mb-2">
+                        <div className="text-slate-400 text-xs font-mono mb-[var(--space-1)]">
                           ({item.affiliate})
                         </div>
                       )}
 
                       {item.location && (
-                        <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-3">
+                        <div className="flex items-center gap-[var(--space-half)] text-xs text-slate-400 mb-[var(--space-1)]">
                           <MapPin className="w-3.5 h-3.5 text-slate-500" />
                           <span>{item.location}</span>
                         </div>
                       )}
 
-                      <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                      <p className="text-slate-300 text-sm leading-[24px] mb-[var(--space-2)]">
                         {item.description}
                       </p>
 
                       {/* Highlights */}
-                      <div className="space-y-1.5 pt-3 border-t border-white/5">
-                        <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                          <BookOpen className="w-3.5 h-3.5 text-cyan-glow" /> Key Focus & Activities
+                      <div className="space-y-[var(--space-1)] pt-[var(--space-1)] border-t border-white/5">
+                        <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-[var(--space-1)] flex items-center gap-[var(--space-half)]">
+                          <BookOpen className="w-3.5 h-3.5 text-cyan-glow" /> Key Focus
                         </div>
                         {item.highlights.map((h, i) => (
-                          <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                          <div key={i} className="flex items-start gap-[var(--space-half)] text-xs text-slate-300">
                             <CheckCircle2 className="w-3.5 h-3.5 text-cyan-glow shrink-0 mt-0.5" />
                             <span>{h}</span>
                           </div>
