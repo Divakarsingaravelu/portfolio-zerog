@@ -8,16 +8,8 @@ import { GithubIcon } from './Icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Layers,
-  ExternalLink,
-  Info,
   CheckCircle2,
-  Sparkles,
   ArrowUpRight,
-  Code2,
-  Cpu,
-  Activity,
-  Workflow,
-  Radio,
   Flame
 } from 'lucide-react';
 
@@ -27,7 +19,7 @@ export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
-  const categories = ['All', 'Full Stack', 'Frontend', 'AI / Machine Learning', 'System Architecture'];
+  const categories = ['All', 'Full Stack', 'Frontend'];
 
   const filteredProjects = activeCategory === 'All'
     ? projects
@@ -45,9 +37,9 @@ export const Projects: React.FC = () => {
           label: 'In Progress',
           classes: 'bg-amber-950/70 text-amber-300 border-amber-500/40 shadow-[0_0_12px_rgba(245,158,11,0.2)]'
         };
-      case 'Architecture / Concept':
+      default:
         return {
-          label: 'Concept',
+          label: 'Active',
           classes: 'bg-cyan-950/70 text-cyan-glow border-cyan-500/40 shadow-[0_0_12px_rgba(0,240,255,0.2)]'
         };
     }
@@ -79,7 +71,7 @@ export const Projects: React.FC = () => {
           </h2>
 
           <p className="text-slate-400 font-mono text-xs sm:text-sm max-w-2xl leading-[24px]">
-            Web applications, system designs, and machine learning work.
+            Personal SaaS platform, academic web applications, and portfolio architecture.
           </p>
         </motion.div>
 
@@ -89,7 +81,7 @@ export const Projects: React.FC = () => {
             <Magnetic key={cat} strength={0.2}>
               <button
                 onClick={() => setActiveCategory(cat)}
-                className={`min-h-[32px] px-[var(--space-2)] py-[var(--space-1)] rounded-full text-xs font-mono transition-all duration-200 border ${
+                className={`min-h-[32px] px-[var(--space-2)] py-[var(--space-1)] rounded-full text-xs font-mono transition-all duration-200 border cursor-pointer ${
                   activeCategory === cat
                     ? 'bg-cyan-950/80 border-cyan-500/60 text-cyan-glow shadow-[0_0_20px_rgba(0,240,255,0.3)] font-semibold'
                     : 'bg-space-800/60 border-white/5 text-slate-400 hover:text-white hover:border-white/20'
@@ -142,7 +134,7 @@ export const Projects: React.FC = () => {
                           {isFlagship && (
                             <span className="inline-flex items-center gap-[var(--space-half)] px-[var(--space-1)] py-[var(--space-half)] rounded-full text-xs font-mono bg-cyan-950/80 text-cyan-glow border border-cyan-500/50">
                               <Flame className="w-3 h-3 text-cyan-glow animate-pulse" />
-                              Flagship
+                              Flagship Project
                             </span>
                           )}
                         </div>
@@ -186,7 +178,7 @@ export const Projects: React.FC = () => {
                         {project.keyFeatures.slice(0, isFlagship ? 3 : 2).map((feat, i) => (
                           <div key={i} className="flex items-start gap-[var(--space-half)] text-xs text-slate-300">
                             <CheckCircle2 className="w-3.5 h-3.5 text-cyan-glow shrink-0 mt-0.5" />
-                            <span className="line-clamp-1">{feat}</span>
+                            <span className="line-clamp-2">{feat}</span>
                           </div>
                         ))}
                       </div>
@@ -226,7 +218,7 @@ export const Projects: React.FC = () => {
                       <Magnetic strength={0.2}>
                         <button
                           onClick={() => setSelectedProject(project)}
-                          className="min-h-[32px] text-xs font-mono text-cyan-glow hover:text-white flex items-center gap-[var(--space-half)] transition-colors group/btn"
+                          className="min-h-[32px] text-xs font-mono text-cyan-glow hover:text-white flex items-center gap-[var(--space-half)] transition-colors group/btn cursor-pointer"
                         >
                           <span>View Details</span>
                           <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
@@ -245,21 +237,6 @@ export const Projects: React.FC = () => {
                               aria-label="GitHub Repository"
                             >
                               <GithubIcon className="w-4 h-4" />
-                            </a>
-                          </Magnetic>
-                        )}
-
-                        {project.liveUrl && (
-                          <Magnetic strength={0.3}>
-                            <a
-                              href={project.liveUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="w-[32px] h-[32px] rounded-xl bg-cyan-950 text-cyan-glow border border-cyan-500/40 hover:bg-cyan-900 transition-all flex items-center justify-center"
-                              title="Live Demo"
-                              aria-label="Live Demo"
-                            >
-                              <ExternalLink className="w-4 h-4" />
                             </a>
                           </Magnetic>
                         )}

@@ -18,6 +18,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       case 'In Progress':
         return 'bg-amber-950/60 text-amber-300 border-amber-500/40';
       case 'Architecture / Concept':
+      default:
         return 'bg-cyan-950/60 text-cyan-glow border-cyan-500/40';
     }
   };
