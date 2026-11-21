@@ -135,7 +135,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {/* Key Stack Quick Badges */}
             <div className="flex flex-wrap items-center gap-[var(--space-1)] pt-[var(--space-half)]">
               <span className="text-xs font-mono text-slate-400 mr-[var(--space-half)]">Focus:</span>
-              {['React.js', 'Node.js', 'TypeScript', 'Java', 'Python', 'SQL'].map((tech) => (
+              {['React 18', 'TypeScript', 'Tailwind CSS', 'Node.js', 'SQL', 'Python', 'Java'].map((tech) => (
                 <span
                   key={tech}
                   className="px-[var(--space-1)] py-[var(--space-half)] rounded-md text-xs font-mono bg-space-800/60 border border-white/5 text-slate-300 hover:border-cyan-500/40 hover:text-cyan-glow transition-all"
@@ -161,7 +161,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <Magnetic strength={0.25}>
                 <button
                   onClick={onOpenResume}
-                  className="w-full sm:w-auto min-h-[40px] px-[var(--space-3)] py-[var(--space-1)] rounded-xl glass-card hover:border-cyan-500/50 text-slate-200 hover:text-white font-medium text-sm transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-[var(--space-half)] group shadow-sm hover:shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+                  className="w-full sm:w-auto min-h-[40px] px-[var(--space-3)] py-[var(--space-1)] rounded-xl glass-card hover:border-cyan-500/50 text-slate-200 hover:text-white font-medium text-sm transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-[var(--space-half)] group shadow-sm hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] cursor-pointer"
                 >
                   <FileDown className="w-4 h-4 text-cyan-400 group-hover:text-cyan-glow transition-colors" />
                   <span>Resume</span>
@@ -179,7 +179,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-[var(--space-half)] min-h-[32px] px-[var(--space-2)] py-[var(--space-1)] rounded-lg bg-space-800/80 border border-white/10 text-slate-300 hover:text-cyan-glow hover:border-cyan-500/40 transition-all text-xs font-mono group"
-                  aria-label="Divakar Singaravelu LinkedIn Profile"
+                  aria-label="Divakar S LinkedIn Profile"
                 >
                   <LinkedinIcon className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
                   <span>LinkedIn</span>
@@ -193,7 +193,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-[var(--space-half)] min-h-[32px] px-[var(--space-2)] py-[var(--space-1)] rounded-lg bg-space-800/80 border border-white/10 text-slate-300 hover:text-white hover:border-cyan-500/40 transition-all text-xs font-mono group"
-                  aria-label="Divakar Singaravelu GitHub Profile"
+                  aria-label="Divakar S GitHub Profile"
                 >
                   <GithubIcon className="w-4 h-4 text-slate-300 group-hover:scale-110 transition-transform" />
                   <span>GitHub</span>
@@ -208,7 +208,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
             className="lg:col-span-5 relative flex items-center justify-center"
           >
             <TiltCard
@@ -233,7 +233,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 <div className="flex items-center gap-[var(--space-half)] bg-space-950/60 p-[var(--space-half)] rounded-lg border border-white/5">
                   <button
                     onClick={() => setActiveTab('code')}
-                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors ${
+                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors cursor-pointer ${
                       activeTab === 'code' ? 'bg-cyan-950 text-cyan-glow border border-cyan-500/30' : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -241,7 +241,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   </button>
                   <button
                     onClick={() => setActiveTab('stack')}
-                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors ${
+                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors cursor-pointer ${
                       activeTab === 'stack' ? 'bg-cyan-950 text-cyan-glow border border-cyan-500/30' : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -249,7 +249,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   </button>
                   <button
                     onClick={() => setActiveTab('terminal')}
-                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors ${
+                    className={`px-[var(--space-1)] py-[var(--space-half)] rounded text-[10px] font-mono transition-colors cursor-pointer ${
                       activeTab === 'terminal' ? 'bg-cyan-950 text-cyan-glow border border-cyan-500/30' : 'text-slate-400 hover:text-white'
                     }`}
                   >
@@ -265,15 +265,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                     <p><span className="text-blue-400">const</span> <span className="text-cyan-glow">developer</span> = &#123;</p>
                     <p className="pl-[var(--space-2)]"><span className="text-slate-400">name:</span> <span className="text-emerald-300">"{personal.fullName}"</span>,</p>
                     <p className="pl-[var(--space-2)]"><span className="text-slate-400">degree:</span> <span className="text-emerald-300">"B.E. Computer Science & Eng"</span>,</p>
-                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">institution:</span> <span className="text-emerald-300">"Adhi College of Engineering"</span>,</p>
-                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">status:</span> <span className="text-amber-300">"Final-year Undergraduate"</span>,</p>
-                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">coreLanguages:</span> [<span className="text-cyan-300">"Java"</span>, <span className="text-cyan-300">"Python"</span>, <span className="text-cyan-300">"C"</span>],</p>
+                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">institution:</span> <span className="text-emerald-300">"Adhi College of Engineering (Anna Univ)"</span>,</p>
+                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">cgpa:</span> <span className="text-cyan-300">7.5</span>,</p>
+                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">internships:</span> [<span className="text-cyan-300">"Happieloop"</span>, <span className="text-cyan-300">"Thiranex"</span>],</p>
+                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">languages:</span> [<span className="text-cyan-300">"JS"</span>, <span className="text-cyan-300">"TS"</span>, <span className="text-cyan-300">"Python"</span>, <span className="text-cyan-300">"Java"</span>, <span className="text-cyan-300">"C"</span>, <span className="text-cyan-300">"SQL"</span>],</p>
                     <p className="pl-[var(--space-2)]"><span className="text-slate-400">stack:</span> &#123;</p>
-                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">frontend:</span> [<span className="text-cyan-300">"React"</span>, <span className="text-cyan-300">"TypeScript"</span>, <span className="text-cyan-300">"Tailwind"</span>],</p>
-                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">backend:</span> [<span className="text-cyan-300">"Node.js"</span>, <span className="text-cyan-300">"Express"</span>, <span className="text-cyan-300">"REST APIs"</span>],</p>
-                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">database:</span> [<span className="text-cyan-300">"SQL"</span>, <span className="text-cyan-300">"SQLite"</span>]</p>
-                    <p className="pl-[var(--space-2)]">&#125;,</p>
-                    <p className="pl-[var(--space-2)]"><span className="text-slate-400">interests:</span> [<span className="text-cyan-300">"AI"</span>, <span className="text-cyan-300">"Web Arch"</span>, <span className="text-cyan-300">"Problem Solving"</span>]</p>
+                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">frontend:</span> [<span className="text-cyan-300">"React 18"</span>, <span className="text-cyan-300">"Tailwind"</span>, <span className="text-cyan-300">"TanStack"</span>],</p>
+                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">backend:</span> [<span className="text-cyan-300">"Node.js"</span>, <span className="text-cyan-300">"REST APIs"</span>],</p>
+                    <p className="pl-[var(--space-4)]"><span className="text-slate-400">databases:</span> [<span className="text-cyan-300">"SQLite"</span>, <span className="text-cyan-300">"SQL"</span>, <span className="text-cyan-300">"RLS"</span>]</p>
+                    <p className="pl-[var(--space-2)]">&#125;</p>
                     <p>&#125;;</p>
                   </div>
                 )}
@@ -290,10 +290,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                           <span className="text-cyan-glow flex items-center gap-[var(--space-half)]">
                             <Code2 className="w-3.5 h-3.5" /> Frontend
                           </span>
-                          <span className="text-slate-400 text-xs">React, TS, Tailwind</span>
+                          <span className="text-slate-400 text-xs">React 18, TS, Tailwind, TanStack</span>
                         </div>
                         <div className="w-full bg-space-800 h-[var(--space-1)] rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-full w-[90%] rounded-full" />
+                          <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-full w-[95%] rounded-full" />
                         </div>
                       </div>
 
@@ -302,10 +302,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                           <span className="text-blue-400 flex items-center gap-[var(--space-half)]">
                             <Cpu className="w-3.5 h-3.5" /> Backend & APIs
                           </span>
-                          <span className="text-slate-400 text-xs">Node.js, Express, REST</span>
+                          <span className="text-slate-400 text-xs">Node.js, REST APIs, Fetch</span>
                         </div>
                         <div className="w-full bg-space-800 h-[var(--space-1)] rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-full w-[85%] rounded-full" />
+                          <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-full w-[90%] rounded-full" />
                         </div>
                       </div>
 
@@ -314,22 +314,22 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                           <span className="text-emerald-400 flex items-center gap-[var(--space-half)]">
                             <Database className="w-3.5 h-3.5" /> Relational Data
                           </span>
-                          <span className="text-slate-400 text-xs">SQL, SQLite</span>
+                          <span className="text-slate-400 text-xs">SQL, SQLite, Row-Level Security</span>
                         </div>
                         <div className="w-full bg-space-800 h-[var(--space-1)] rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-[80%] rounded-full" />
+                          <div className="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-[85%] rounded-full" />
                         </div>
                       </div>
 
                       <div>
                         <div className="flex justify-between text-xs mb-[var(--space-half)]">
                           <span className="text-cyan-400 flex items-center gap-[var(--space-half)]">
-                            <Sparkles className="w-3.5 h-3.5" /> ML & Audio
+                            <Sparkles className="w-3.5 h-3.5" /> Internships
                           </span>
-                          <span className="text-slate-400 text-xs">Speech Emotion</span>
+                          <span className="text-slate-400 text-xs">Happieloop & Thiranex</span>
                         </div>
                         <div className="w-full bg-space-800 h-[var(--space-1)] rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-cyan-500 to-blue-400 h-full w-[78%] rounded-full" />
+                          <div className="bg-gradient-to-r from-cyan-500 to-blue-400 h-full w-[90%] rounded-full" />
                         </div>
                       </div>
                     </div>
@@ -342,11 +342,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                     <div className="text-emerald-400 flex items-center gap-[var(--space-half)]">
                       <CheckCircle2 className="w-3.5 h-3.5" /> System status: Ready
                     </div>
-                    <div className="text-slate-400">divakar@dev:~$ load-modules</div>
+                    <div className="text-slate-400">divakar@dev:~$ load-profile</div>
                     <div className="text-cyan-300">
-                      &gt; [OK] B.E. CSE (Anna University)<br />
-                      &gt; [OK] NxtWave CCBP Full Stack Program<br />
-                      &gt; [OK] Active Project: MenuBase SaaS
+                      &gt; [OK] B.E. CSE (Anna University, CGPA: 7.5)<br />
+                      &gt; [OK] 2 Industry Internships (Happieloop, Thiranex)<br />
+                      &gt; [OK] NxtWave CCBP Full Stack Training<br />
+                      &gt; [OK] Projects: MenuBase SaaS, Wikipedia Search
                     </div>
                     <div className="text-slate-400 pt-[var(--space-half)] flex items-center gap-[var(--space-half)]">
                       <span>divakar@dev:~$</span>
@@ -359,7 +360,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 <div className="pt-[var(--space-2)] border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
                   <span className="flex items-center gap-[var(--space-half)]">
                     <span className="w-2 h-2 rounded-full bg-cyan-glow animate-ping" />
-                    Zero-G Simulation Engine
+                    Zero-G Physics
                   </span>
                   <span className="font-mono text-cyan-glow/80">divakar.ts</span>
                 </div>
@@ -370,7 +371,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
             {/* Orbiting Tech Badges */}
             <div className={`hidden sm:block absolute -top-[var(--space-2)] -right-[var(--space-1)] px-[var(--space-2)] py-[var(--space-1)] rounded-full glass-card border border-cyan-500/40 text-cyan-glow text-xs font-mono shadow-glow-cyan z-20 ${isZeroG ? 'animate-float-fast' : ''}`}>
-              ⚡ React + TypeScript
+              ⚡ React 18 + TS
             </div>
 
             <div className={`hidden sm:block absolute -bottom-[var(--space-2)] -left-[var(--space-1)] px-[var(--space-2)] py-[var(--space-1)] rounded-full glass-card border border-blue-500/40 text-blue-300 text-xs font-mono shadow-glow-blue z-20 ${isZeroG ? 'animate-float-medium' : ''}`}>
@@ -378,7 +379,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
 
             <div className={`hidden md:block absolute top-1/2 -right-[var(--space-4)] -translate-y-1/2 px-[var(--space-1)] py-[var(--space-half)] rounded-md glass-card border border-emerald-500/40 text-emerald-300 text-xs font-mono z-20 ${isZeroG ? 'animate-float-slow' : ''}`}>
-              🤖 AI & ML
+              💼 2 Internships
             </div>
 
           </motion.div>
