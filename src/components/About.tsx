@@ -3,7 +3,7 @@ import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { usePhysics } from '../context/PhysicsContext';
 import { TiltCard } from './motion/TiltCard';
 import { motion } from 'framer-motion';
-import { Code2, Cpu, Sparkles, MapPin, GraduationCap, Award, CheckCircle } from 'lucide-react';
+import { Code2, Cpu, Sparkles, MapPin, GraduationCap, Award, CheckCircle, Briefcase } from 'lucide-react';
 
 export const About: React.FC = () => {
   const { isZeroG } = usePhysics();
@@ -60,15 +60,15 @@ export const About: React.FC = () => {
                 <div className="pt-[var(--space-1)] flex flex-wrap gap-[var(--space-1)] text-xs font-mono text-slate-300">
                   <div className="flex items-center gap-[var(--space-half)] bg-space-900/80 px-[var(--space-2)] py-[var(--space-1)] rounded-xl border border-white/5">
                     <GraduationCap className="w-4 h-4 text-cyan-glow" />
-                    <span>Adhi College of Engineering (B.E. CSE)</span>
+                    <span>Adhi College of Engineering (B.E. CSE | CGPA: 7.5)</span>
+                  </div>
+                  <div className="flex items-center gap-[var(--space-half)] bg-space-900/80 px-[var(--space-2)] py-[var(--space-1)] rounded-xl border border-white/5">
+                    <Briefcase className="w-4 h-4 text-emerald-400" />
+                    <span>2 Internships (Happieloop, Thiranex)</span>
                   </div>
                   <div className="flex items-center gap-[var(--space-half)] bg-space-900/80 px-[var(--space-2)] py-[var(--space-1)] rounded-xl border border-white/5">
                     <MapPin className="w-4 h-4 text-blue-400" />
                     <span>{personal.location}</span>
-                  </div>
-                  <div className="flex items-center gap-[var(--space-half)] bg-space-900/80 px-[var(--space-2)] py-[var(--space-1)] rounded-xl border border-white/5">
-                    <Award className="w-4 h-4 text-emerald-400" />
-                    <span>NxtWave CCBP Full Stack Certified</span>
                   </div>
                 </div>
               </div>
@@ -80,12 +80,12 @@ export const About: React.FC = () => {
                   <div className="text-xs font-mono text-slate-400 mt-[var(--space-half)]">Graduation</div>
                 </div>
                 <div className="p-[var(--space-2)] rounded-xl border border-white/10 bg-space-900/60 text-center">
-                  <div className="text-2xl sm:text-3xl font-bold font-mono text-blue-400 leading-[32px]">3+</div>
-                  <div className="text-xs font-mono text-slate-400 mt-[var(--space-half)]">Languages</div>
+                  <div className="text-2xl sm:text-3xl font-bold font-mono text-blue-400 leading-[32px]">7.5</div>
+                  <div className="text-xs font-mono text-slate-400 mt-[var(--space-half)]">Anna Univ CGPA</div>
                 </div>
                 <div className="p-[var(--space-2)] rounded-xl border border-white/10 bg-space-900/60 text-center">
-                  <div className="text-2xl sm:text-3xl font-bold font-mono text-cyan-400 leading-[32px]">6+</div>
-                  <div className="text-xs font-mono text-slate-400 mt-[var(--space-half)]">Projects</div>
+                  <div className="text-2xl sm:text-3xl font-bold font-mono text-cyan-400 leading-[32px]">2</div>
+                  <div className="text-xs font-mono text-slate-400 mt-[var(--space-half)]">Internships</div>
                 </div>
                 <div className="p-[var(--space-2)] rounded-xl border border-white/10 bg-space-900/60 text-center">
                   <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 leading-[32px]">5</div>
@@ -138,7 +138,7 @@ export const About: React.FC = () => {
                 <div className="pt-[var(--space-3)] mt-[var(--space-2)] border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
                   <span className="flex items-center gap-[var(--space-half)]">
                     <CheckCircle className="w-3.5 h-3.5 text-cyan-glow" />
-                    Active
+                    Verified
                   </span>
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: pillar.accent }}>
                     0{index + 1}
