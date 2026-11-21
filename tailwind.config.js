@@ -20,14 +20,34 @@ export default {
           glow: '#00F0FF',
           deep: '#00B8D4',
         },
-        violet: {
-          glow: '#8B5CF6',
-          nebula: '#7000FF',
-        }
+        blue: {
+          accent: '#3B82F6',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      spacing: {
+        'half': 'var(--space-half)',
+        '1': 'var(--space-1)',
+        '2': 'var(--space-2)',
+        '3': 'var(--space-3)',
+        '4': 'var(--space-4)',
+        '5': 'var(--space-5)',
+        '6': 'var(--space-6)',
+        '8': 'var(--space-8)',
+        '10': 'var(--space-10)',
+        '12': 'var(--space-12)',
+        'sp-1': 'var(--space-1)',
+        'sp-2': 'var(--space-2)',
+        'sp-3': 'var(--space-3)',
+        'sp-4': 'var(--space-4)',
+        'sp-5': 'var(--space-5)',
+        'sp-6': 'var(--space-6)',
+        'sp-8': 'var(--space-8)',
+        'sp-10': 'var(--space-10)',
+        'sp-12': 'var(--space-12)',
       },
       animation: {
         'float-slow': 'float 6s ease-in-out infinite',
@@ -58,7 +78,7 @@ export default {
       },
       boxShadow: {
         'glow-cyan': '0 0 25px -5px rgba(0, 240, 255, 0.4)',
-        'glow-violet': '0 0 25px -5px rgba(139, 92, 246, 0.4)',
+        'glow-blue': '0 0 25px -5px rgba(59, 130, 246, 0.4)',
         'glow-subtle': '0 0 15px -3px rgba(255, 255, 255, 0.1)',
         'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
       }

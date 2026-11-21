@@ -11,7 +11,19 @@
     --text-primary: #F8FAFC;
     --text-muted: #94A3B8;
     --accent-cyan: #00F0FF;
-    --accent-violet: #7000FF;
+    --accent-blue: #3B82F6;
+
+    /* 8-point spacing scale */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-10: 80px;
+    --space-12: 96px;
+    --space-half: 4px; /* icon-to-text gaps only */
   }
   
   html {
@@ -26,6 +38,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -34,7 +47,7 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 7px;
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
     background: #06070B;
@@ -56,7 +69,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+    border-radius: var(--space-2);
   }
 
   .glass-card-hover {
@@ -65,7 +78,7 @@
   .glass-card-hover:hover {
     background: rgba(255, 255, 255, 0.07);
     border-color: rgba(0, 240, 255, 0.35);
-    box-shadow: 0 12px 36px -10px rgba(0, 240, 255, 0.2), 0 0 24px -5px rgba(112, 0, 255, 0.25);
+    box-shadow: 0 12px 36px -10px rgba(0, 240, 255, 0.2), 0 0 24px -5px rgba(59, 130, 246, 0.2);
   }
 
   .glass-nav {
@@ -82,8 +95,8 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .text-gradient-nebula {
-    background: linear-gradient(135deg, #00F0FF 0%, #A855F7 50%, #7000FF 100%);
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -105,19 +118,19 @@
     pointer-events: none;
   }
 
-  .aurora-violet {
+  .aurora-blue {
     position: absolute;
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(112, 0, 255, 0.14) 0%, rgba(112, 0, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(59, 130, 246, 0) 70%);
     filter: blur(80px);
     pointer-events: none;
   }
 
   /* Grid Pattern */
   .bg-grid-pattern {
-    background-size: 40px 40px;
+    background-size: var(--space-5) var(--space-5);
     background-image: 
       linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
