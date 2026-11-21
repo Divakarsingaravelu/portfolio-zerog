@@ -65,14 +65,14 @@ export const PORTFOLIO_DATA = {
     shortName: "Divakar.S",
     title: "Full Stack Developer",
     statusBadge: "Final-year CSE Student",
-    bioHeading: "A little about my journey.",
-    bio: "I'm Divakar Singaravelu, a Computer Science and Engineering student with a strong interest in full-stack development. I enjoy learning programming languages, creating web applications, and exploring technologies that solve practical problems. My goal is to become a skilled software developer and contribute to meaningful projects.",
-    heroDescription: "I'm a Computer Science Engineering student passionate about software development, modern web technologies, and solving real-world problems. I enjoy building useful digital experiences and continuously improving my technical skills.",
+    bioHeading: "A little about me.",
+    bio: "I'm Divakar Singaravelu, a final-year Computer Science and Engineering student at Adhi College of Engineering and Technology (Anna University). I build full-stack web applications with React, Node.js, and SQL. I also work with Java, Python, and C. Right now I'm building MenuBase, a SaaS tool for restaurant menu management, and a speech emotion recognition system for my final-year project.",
+    heroDescription: "Final-year CSE student at Anna University. I build web applications with React, TypeScript, Node.js, and SQL. Currently working on a restaurant menu SaaS platform and a speech emotion recognition project.",
     typewriterPhrases: [
-      "Building Modern Web Experiences",
-      "Turning Ideas into Applications",
-      "Exploring AI and Emerging Technologies",
-      "Writing Clean, Scalable Code"
+      "Full Stack Web Development",
+      "React + TypeScript + Node.js",
+      "Speech Emotion Recognition",
+      "Java, Python, and C"
     ],
     contactEmail: "divakar.dev.work@gmail.com", // Configurable email
     linkedInUrl: "https://www.linkedin.com/in/divakarsingaravelu/",
@@ -81,33 +81,33 @@ export const PORTFOLIO_DATA = {
     location: "Chennai, India",
     interests: [
       "Full Stack Development",
-      "Artificial Intelligence & ML",
+      "AI & Machine Learning",
       "System Architecture",
-      "Algorithmic Problem-Solving"
+      "Problem Solving"
     ]
   },
 
   aboutPillars: [
     {
       title: "Development",
-      description: "Learning and building modern, responsive web applications with clean architecture and robust state management.",
+      description: "Building web applications with React, TypeScript, Tailwind CSS on the frontend and Node.js, Express, SQL on the backend.",
       icon: "Code2",
       gradient: "from-cyan-500/20 to-blue-600/20",
       accent: "#00F0FF"
     },
     {
       title: "Problem Solving",
-      description: "Strengthening programming and logical-thinking skills through core languages like Java, Python, and C.",
+      description: "Writing code in Java, Python, and C. Studying data structures, algorithms, and object-oriented programming.",
       icon: "Cpu",
-      gradient: "from-violet-500/20 to-purple-600/20",
-      accent: "#8B5CF6"
+      gradient: "from-blue-500/20 to-cyan-600/20",
+      accent: "#3B82F6"
     },
     {
       title: "Continuous Learning",
-      description: "Exploring emerging technologies, AI/ML concepts, and modern engineering practices to build impactful software.",
+      description: "Completed NxtWave CCBP full-stack training. Currently studying speech emotion recognition with Python and neural networks.",
       icon: "Sparkles",
-      gradient: "from-pink-500/20 to-rose-600/20",
-      accent: "#EC4899"
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      accent: "#00B8D4"
     }
   ],
 
@@ -116,14 +116,14 @@ export const PORTFOLIO_DATA = {
       degree: "Bachelor of Engineering in Computer Science and Engineering",
       institution: "Adhi College of Engineering and Technology",
       affiliate: "Affiliated with Anna University",
-      period: "2023 – 2027",
+      period: "2023 - 2027",
       status: "Final-year CSE Undergraduate",
       location: "Kanchipuram / Chennai, Tamil Nadu",
-      description: "Comprehensive curriculum covering data structures, algorithms, database management, computer networks, software engineering, and operating systems.",
+      description: "Coursework covers data structures, algorithms, database management, computer networks, software engineering, and operating systems.",
       highlights: [
-        "Core focus on Software Engineering, Object-Oriented Programming, and Database Systems",
-        "Engaged in project development, workshops, and technical events",
-        "Exploring machine learning and full-stack web applications"
+        "Focus on software engineering, object-oriented programming, and databases",
+        "Project work, workshops, and technical events",
+        "Building full-stack web apps and studying machine learning"
       ]
     },
     {
@@ -131,11 +131,11 @@ export const PORTFOLIO_DATA = {
       institution: "NxtWave CCBP 4.0 Academy",
       period: "Intensive Tech Track",
       status: "Professional Skill Program",
-      description: "Hands-on, industry-aligned training covering modern frontend and backend development with JavaScript, React, Node.js, and databases.",
+      description: "Hands-on training in frontend and backend development with JavaScript, React, Node.js, and SQL databases.",
       highlights: [
-        "Dynamic Web Application Architecture & Asynchronous programming",
-        "Frontend mastery with React.js, responsive design, and modern CSS frameworks",
-        "Backend REST APIs with Node.js, Express.js, and SQL/SQLite databases"
+        "Web application architecture and asynchronous programming",
+        "React.js, responsive design, and CSS frameworks",
+        "Backend REST APIs with Node.js, Express.js, and SQL/SQLite"
       ]
     }
   ] as EducationItem[],
@@ -177,21 +177,21 @@ export const PORTFOLIO_DATA = {
   projects: [
     {
       id: "menubase-saas",
-      title: "MenuBase — Multi-Platform Restaurant Menu SaaS",
-      shortDescription: "A flagship full-stack SaaS platform designed to centralize, manage, and synchronize digital restaurant menus across multiple food delivery platforms.",
-      fullDescription: "MenuBase addresses the operational bottleneck restaurants face when updating items, pricing, and availability across disparate delivery portals. Built with React, TypeScript, and modern modular architecture, it provides an intuitive dashboard for menu cataloging, automated real-time status toggling, and structured API endpoints.",
+      title: "MenuBase: Restaurant Menu SaaS",
+      shortDescription: "A full-stack SaaS platform that lets restaurants manage and sync their digital menus across multiple food delivery platforms from one dashboard.",
+      fullDescription: "MenuBase solves the problem of updating items, prices, and availability across multiple delivery portals separately. Built with React, TypeScript, and Tailwind CSS, it provides a dashboard for menu cataloging, real-time status toggling, and structured API endpoints for syncing with delivery platforms.",
       category: "Full Stack",
       technologies: ["React.js", "Vite", "TypeScript", "Tailwind CSS", "REST APIs", "Node.js"],
       keyFeatures: [
-        "Centralized catalog manager for multi-channel menu items and categories",
-        "Instant price and stock availability updates across synced delivery channels",
-        "Responsive, modern glassmorphic dashboard optimized for desktop and tablet displays",
-        "Modular state management designed for real-time synchronization"
+        "Centralized catalog for menu items and categories across delivery channels",
+        "Instant price and stock updates synced across connected platforms",
+        "Responsive glassmorphic dashboard for desktop and tablet",
+        "Modular state management for real-time synchronization"
       ],
       status: "In Progress",
       githubUrl: "https://github.com/divakarsingaravelu",
       liveUrl: undefined,
-      imagePlaceholderGradient: "from-cyan-600/30 via-blue-600/20 to-purple-700/30",
+      imagePlaceholderGradient: "from-cyan-600/30 via-blue-600/20 to-blue-800/30",
       featured: true,
       bentoSpan: "col-span-12 lg:col-span-8",
       accentGlow: "rgba(0, 240, 255, 0.25)",
@@ -201,49 +201,49 @@ export const PORTFOLIO_DATA = {
         { label: "Target Outlets", value: "F&B Portals" }
       ],
       architectureLayers: [
-        { layer: "Presentation", details: "React 18 + TypeScript with Tailwind CSS & Glassmorphism" },
+        { layer: "Presentation", details: "React 18 + TypeScript with Tailwind CSS" },
         { layer: "State Engine", details: "Centralized catalog state with optimistic UI updates" },
-        { layer: "Integration", details: "RESTful endpoints prepared for Swiggy/Zomato webhook syndication" }
+        { layer: "Integration", details: "RESTful endpoints for delivery platform webhook syndication" }
       ]
     },
     {
       id: "dynamic-web-apps-suite",
       title: "Dynamic Web Applications Suite",
-      shortDescription: "A collection of interactive, responsive web applications highlighting asynchronous API consumption, dynamic DOM manipulation, and UX workflows.",
-      fullDescription: "Developed through intensive practical training at NxtWave CCBP 4.0 Academy. Highlights practical mastery of core web fundamentals including asynchronous fetch requests, local storage caching, client-side filtering, and responsive mobile-first layouts.",
+      shortDescription: "A collection of interactive web apps built during NxtWave CCBP training, covering async APIs, DOM manipulation, and responsive layouts.",
+      fullDescription: "Built during the NxtWave CCBP 4.0 program. These projects demonstrate async fetch requests, local storage, client-side filtering, and mobile-first responsive layouts using HTML, CSS, JavaScript, and Bootstrap.",
       category: "Frontend",
       technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "Bootstrap"],
       keyFeatures: [
-        "Asynchronous external REST API data integration with custom loaders and error boundaries",
-        "Dynamic search, multi-criteria filtering, and client-side pagination",
-        "Persistent user preferences and state retention with LocalStorage",
-        "Fluid responsive design tested across multiple viewport dimensions"
+        "Async REST API calls with loaders and error handling",
+        "Search, filtering, and client-side pagination",
+        "Persistent user preferences via LocalStorage",
+        "Responsive layouts tested across viewports"
       ],
       status: "Completed",
       githubUrl: "https://github.com/divakarsingaravelu",
       liveUrl: undefined,
-      imagePlaceholderGradient: "from-amber-600/30 via-orange-600/20 to-pink-600/20",
+      imagePlaceholderGradient: "from-amber-600/30 via-orange-600/20 to-cyan-600/20",
       featured: false,
       bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(245, 158, 11, 0.25)",
       metrics: [
         { label: "App Count", value: "Multiple Modules" },
         { label: "Protocols", value: "REST / Fetch" },
-        { label: "DOM State", value: "Dynamic Event Loop" }
+        { label: "DOM State", value: "Event-driven" }
       ]
     },
     {
       id: "hotel-management-system",
       title: "Hotel Management System Architecture",
-      shortDescription: "Comprehensive system architecture and object-oriented design modeling core hospitality workflows, booking states, and database schemas.",
-      fullDescription: "An in-depth software engineering design model developed using UML methodologies (Argo-UML). Covers class diagrams, sequence diagrams for reservation check-in/check-out lifecycles, entity-relationship structures, and component interactions for hospitality software.",
+      shortDescription: "Object-oriented design model for hospitality workflows: booking states, database schemas, and UML diagrams built with Argo-UML.",
+      fullDescription: "A software engineering design project using UML methodologies (Argo-UML). Covers class diagrams, sequence diagrams for reservation check-in/check-out, entity-relationship structures, and component interactions for hotel software.",
       category: "System Architecture",
       technologies: ["Object-Oriented Analysis", "UML Modeling", "Argo-UML", "Database Design"],
       keyFeatures: [
-        "Complete UML suite: Class Diagrams, Use Case Diagrams, and Sequence Flows",
-        "Detailed state transition modeling for room allocation and billing cycles",
-        "Normalized relational database schema mapping",
-        "Scalable modular architectural design following SOLID principles"
+        "Class diagrams, use case diagrams, and sequence flows",
+        "State transition modeling for room allocation and billing",
+        "Normalized relational database schema",
+        "Modular architecture following SOLID principles"
       ],
       status: "Architecture / Concept",
       githubUrl: "https://github.com/divakarsingaravelu",
@@ -261,23 +261,23 @@ export const PORTFOLIO_DATA = {
     {
       id: "speech-emotion-recognition",
       title: "Speech Emotion Recognition (SER)",
-      shortDescription: "A final-year CSE machine learning project exploring deep learning techniques to classify and recognize human emotions from speech audio signals.",
-      fullDescription: "This project focuses on extracting acoustic features such as Mel-Frequency Cepstral Coefficients (MFCCs), chroma, and spectral contrast from speech audio datasets (such as RAVDESS) to train neural network architectures capable of predicting emotional states (happy, sad, neutral, angry, etc.).",
+      shortDescription: "Final-year project: a machine learning system that classifies emotions from speech audio using MFCCs and neural networks.",
+      fullDescription: "This project extracts acoustic features (Mel-Frequency Cepstral Coefficients, chroma, spectral contrast) from speech audio datasets like RAVDESS and trains neural network models to predict emotional states such as happy, sad, neutral, and angry.",
       category: "AI / Machine Learning",
       technologies: ["Python", "Librosa", "Audio Processing", "Machine Learning", "Neural Networks"],
       keyFeatures: [
-        "Acoustic audio feature extraction utilizing MFCCs and spectral analysis",
-        "Deep learning classifier pipeline predicting multiple primary emotion categories",
-        "Comprehensive confusion matrix and accuracy evaluation benchmarks",
-        "Final-year capstone engineering research initiative"
+        "MFCC and spectral feature extraction from audio",
+        "Neural network classifier for multiple emotion categories",
+        "Confusion matrix and accuracy evaluation",
+        "Final-year capstone research project"
       ],
       status: "In Progress",
       githubUrl: "https://github.com/divakarsingaravelu",
       liveUrl: undefined,
-      imagePlaceholderGradient: "from-purple-600/30 via-violet-600/20 to-pink-600/30",
+      imagePlaceholderGradient: "from-blue-600/30 via-cyan-600/20 to-blue-800/30",
       featured: false,
       bentoSpan: "col-span-12 lg:col-span-7",
-      accentGlow: "rgba(139, 92, 246, 0.25)",
+      accentGlow: "rgba(59, 130, 246, 0.25)",
       metrics: [
         { label: "Domain", value: "Audio Signal Processing" },
         { label: "Feature Extraction", value: "MFCC / Chroma" },
@@ -286,52 +286,52 @@ export const PORTFOLIO_DATA = {
     },
     {
       id: "hostel-outpass-management",
-      title: "Digital Hostel Outpass Management System",
-      shortDescription: "A modern web application concept for automating hostel student outpass requests, multi-tier approvals, and gatekeeper record management.",
-      fullDescription: "Designed to eliminate paper-based outpass slips in educational institutions. Students can submit digital leave/outpass requests, wardens and mentors receive instant notification for review, and security personnel at campus gates can verify clearance via QR or status codes.",
+      title: "Hostel Outpass Management System",
+      shortDescription: "A web app concept for digitizing hostel outpass requests with role-based dashboards for students, wardens, and gate security.",
+      fullDescription: "Replaces paper-based outpass slips in educational institutions. Students submit digital leave requests, wardens review and approve them, and gate security verifies clearance via status codes. Built with React, Node.js, Express, SQLite, and Tailwind CSS.",
       category: "Full Stack",
       technologies: ["React.js", "Node.js", "Express.js", "SQLite", "Tailwind CSS"],
       keyFeatures: [
-        "Role-based authentication & dashboards: Student, Warden, and Gate Security",
-        "Digital request lifecycle tracking: Pending, Approved, Rejected, and Out-of-Campus",
-        "Automated timestamping for departure and entry log tracking",
-        "Exportable audit logs for administrative accountability"
+        "Role-based dashboards: Student, Warden, Gate Security",
+        "Request lifecycle: Pending, Approved, Rejected, Out-of-Campus",
+        "Automated departure and entry timestamps",
+        "Exportable audit logs"
       ],
       status: "Architecture / Concept",
       githubUrl: "https://github.com/Divakarsingaravelu/hostel-outpass-system",
       liveUrl: undefined,
-      imagePlaceholderGradient: "from-blue-600/30 via-indigo-600/20 to-cyan-700/20",
+      imagePlaceholderGradient: "from-blue-600/30 via-cyan-600/20 to-blue-700/20",
       featured: false,
       bentoSpan: "col-span-12 lg:col-span-6",
       accentGlow: "rgba(59, 130, 246, 0.25)",
       metrics: [
         { label: "User Roles", value: "Student, Warden, Gate" },
-        { label: "Database", value: "SQLite Relational" },
+        { label: "Database", value: "SQLite" },
         { label: "Clearance", value: "Instant Verification" }
       ]
     },
     {
       id: "personal-portfolio-zerog",
-      title: "Zero-Gravity Developer Portfolio",
-      shortDescription: "A futuristic, interactive personal portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion with Zero-G physics simulation.",
-      fullDescription: "This very website! Showcases modern frontend engineering with interactive starfields, physics toggling (Zero-G vs Gravity drag momentum), 3D tilt interactions, certificate inspection modals, and accessible responsive design.",
+      title: "Zero-Gravity Portfolio",
+      shortDescription: "This portfolio site, built with React, TypeScript, Tailwind CSS, and Framer Motion. Includes a physics toggle and interactive starfield.",
+      fullDescription: "This website. It uses an interactive starfield canvas, physics toggling (zero-G float vs gravity drag), 3D tilt card interactions, certificate modals, and responsive design. All data is loaded from a central config file.",
       category: "Frontend",
       technologies: ["React.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
       keyFeatures: [
-        "Interactive Zero-G / Gravity physics toggle with floating weightless cards",
-        "Interactive Starfield canvas reacting to cursor position and drag forces",
-        "Centralized configuration for frictionless updates to projects, skills, and certs",
-        "Strictly genuine data presentation with verified links and no simulated claims"
+        "Zero-G / Gravity physics toggle with floating cards",
+        "Interactive starfield that reacts to cursor position",
+        "Single config file for all projects, skills, and certifications",
+        "Verified data only, no simulated stats"
       ],
       status: "Completed",
       githubUrl: "https://github.com/Divakarsingaravelu/portfolio-zerog",
       liveUrl: "#",
-      imagePlaceholderGradient: "from-cyan-500/30 via-violet-600/20 to-purple-800/30",
+      imagePlaceholderGradient: "from-cyan-500/30 via-blue-600/20 to-blue-800/30",
       featured: false,
       bentoSpan: "col-span-12 lg:col-span-6",
       accentGlow: "rgba(0, 240, 255, 0.25)",
       metrics: [
-        { label: "Framerate", value: "Smooth 60 FPS" },
+        { label: "Framerate", value: "60 FPS" },
         { label: "Physics", value: "Interactive Zero-G" },
         { label: "Type Safety", value: "100% TypeScript" }
       ]
@@ -349,9 +349,9 @@ export const PORTFOLIO_DATA = {
       bentoSpan: "col-span-12 lg:col-span-7",
       accentGlow: "rgba(0, 240, 255, 0.25)",
       highlights: [
-        "Asynchronous JavaScript, Event Loop, Fetch APIs, and JSON data structures",
-        "Dynamic DOM manipulation and state synchronization",
-        "Form validation and dynamic UI state handling"
+        "Async JavaScript, event loop, Fetch APIs, and JSON data",
+        "DOM manipulation and state synchronization",
+        "Form validation and UI state handling"
       ]
     },
     {
@@ -362,11 +362,11 @@ export const PORTFOLIO_DATA = {
       category: "Programming",
       badge: "Core Engineering",
       bentoSpan: "col-span-12 lg:col-span-5",
-      accentGlow: "rgba(139, 92, 246, 0.25)",
+      accentGlow: "rgba(59, 130, 246, 0.25)",
       highlights: [
-        "Object-Oriented Programming (OOP) principles: Encapsulation, Inheritance, Polymorphism",
-        "Exception handling, Collections Framework, and Multithreading fundamentals",
-        "Algorithmic problem solving and data structure implementation"
+        "OOP principles: encapsulation, inheritance, polymorphism",
+        "Exception handling, collections, and multithreading",
+        "Data structure implementation and problem solving"
       ]
     },
     {
@@ -377,11 +377,11 @@ export const PORTFOLIO_DATA = {
       category: "Emerging Tech",
       badge: "Hardware & Cloud",
       bentoSpan: "col-span-12 lg:col-span-4",
-      accentGlow: "rgba(236, 72, 153, 0.25)",
+      accentGlow: "rgba(0, 184, 212, 0.25)",
       highlights: [
-        "Sensor data acquisition, microcontroller programming, and actuator interfacing",
-        "IoT communication protocols (MQTT, HTTP) and cloud dashboard telemetry",
-        "Hardware-to-software integration and prototype building"
+        "Sensor data acquisition, microcontroller programming, and actuators",
+        "IoT communication protocols (MQTT, HTTP) and cloud dashboards",
+        "Hardware-to-software integration and prototyping"
       ]
     },
     {
@@ -394,24 +394,24 @@ export const PORTFOLIO_DATA = {
       bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(16, 185, 129, 0.25)",
       highlights: [
-        "Core syntax, data types, list comprehensions, and functional programming constructs",
-        "Modular programming, file I/O operations, and standard libraries",
-        "Foundation for machine learning feature engineering and scripts"
+        "Core syntax, data types, list comprehensions, and functional constructs",
+        "Modular programming, file I/O, and standard libraries",
+        "Foundation for machine learning and scripting"
       ]
     },
     {
       id: "javascript-essentials",
-      title: "JavaScript Essentials & Flexbox Architecture",
+      title: "JavaScript Essentials & Flexbox",
       issuer: "Web Engineering Certification",
       date: "Certified",
       category: "Web Development",
-      badge: "Modern Frontend",
+      badge: "Frontend",
       bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(59, 130, 246, 0.25)",
       highlights: [
-        "ES6+ features: Promises, Async/Await, Destructuring, and Scope Chains",
-        "Browser APIs, LocalStorage, and Event delegation models",
-        "Advanced CSS layout engines: Flexbox, CSS Grid, and fluid typography"
+        "ES6+ features: Promises, async/await, destructuring, scope chains",
+        "Browser APIs, LocalStorage, and event delegation",
+        "CSS Flexbox, CSS Grid, and fluid typography"
       ]
     }
   ] as Certification[]
