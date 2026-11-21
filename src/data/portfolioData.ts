@@ -13,15 +13,15 @@ export interface Project {
   title: string;
   shortDescription: string;
   fullDescription: string;
-  category: 'Full Stack' | 'Frontend' | 'AI / Machine Learning' | 'System Architecture';
+  category: 'Full Stack' | 'Frontend';
   technologies: string[];
   keyFeatures: string[];
   status: 'Completed' | 'In Progress' | 'Architecture / Concept';
-  githubUrl?: string; // Optional/configurable
-  liveUrl?: string;   // Optional/configurable
+  githubUrl?: string;
+  liveUrl?: string;
   imagePlaceholderGradient: string;
   featured?: boolean;
-  bentoSpan: string; // e.g., 'col-span-12 lg:col-span-8'
+  bentoSpan: string;
   metrics?: ProjectMetric[];
   accentGlow?: string;
   architectureLayers?: ArchitectureLayer[];
@@ -29,8 +29,8 @@ export interface Project {
 
 export interface SkillItem {
   name: string;
-  category: 'Frontend' | 'Backend & DB' | 'Languages' | 'Tools & Workflow';
-  icon: string; // Lucide icon name or descriptor
+  category: 'Frontend' | 'Backend & DB' | 'Languages' | 'Tools & Workflow' | 'Soft Skills';
+  icon: string;
   featured?: boolean;
 }
 
@@ -59,52 +59,95 @@ export interface EducationItem {
   highlights: string[];
 }
 
+export interface InternshipItem {
+  role: string;
+  company: string;
+  period: string;
+  dates: string;
+  certificateId: string;
+  description: string;
+  highlights: string[];
+}
+
 export const PORTFOLIO_DATA = {
   personal: {
-    fullName: "Divakar Singaravelu",
-    shortName: "Divakar.S",
+    fullName: "Divakar S",
+    shortName: "Divakar S",
     title: "Full Stack Developer",
-    statusBadge: "Final-year CSE Student",
-    bioHeading: "A little about me.",
-    bio: "I'm Divakar Singaravelu, a final-year Computer Science and Engineering student at Adhi College of Engineering and Technology (Anna University). I build full-stack web applications with React, Node.js, and SQL. I also work with Java, Python, and C. Right now I'm building MenuBase, a SaaS tool for restaurant menu management, and a speech emotion recognition system for my final-year project.",
-    heroDescription: "Final-year CSE student at Anna University. I build web applications with React, TypeScript, Node.js, and SQL. Currently working on a restaurant menu SaaS platform and a speech emotion recognition project.",
+    subtitles: ["Full Stack Developer", "Web Developer", "Software Developer"],
+    statusBadge: "B.E. CSE (2023 - 2027) | CGPA: 7.5",
+    bioHeading: "About me.",
+    bio: "Detail-oriented Software Developer pursuing a B.E. in Computer Science Engineering at Adhi College of Engineering and Technology, Anna University, Kanchipuram (CGPA: 7.5). Proficient in JavaScript, React 18, TypeScript, Python, Java, Node.js, REST API integration, and SQL/SQLite databases. Proven ability to deliver software solutions through two industry internships, technical projects, and NxtWave CCBP 4.0 training.",
+    heroDescription: "Computer Science Engineering student at Adhi College of Engineering and Technology, Anna University (CGPA: 7.5). Proficient in JavaScript, React 18, TypeScript, Python, Java, Node.js, and SQL. Completed two industry internships at Happieloop Technologies and Thiranex.",
     typewriterPhrases: [
-      "Full Stack Web Development",
-      "React + TypeScript + Node.js",
-      "Speech Emotion Recognition",
-      "Java, Python, and C"
+      "Full Stack Developer",
+      "Web Developer",
+      "Software Developer",
+      "React 18 + TypeScript + Tailwind CSS",
+      "Node.js + REST APIs + SQLite / SQL"
     ],
-    contactEmail: "divakar.dev.work@gmail.com", // Configurable email
+    contactEmail: "divakarsingaravelu@gmail.com",
+    phone: "9786388241",
     linkedInUrl: "https://www.linkedin.com/in/divakarsingaravelu/",
-    githubUrl: "https://github.com/divakarsingaravelu", // Configurable GitHub profile
+    githubUrl: "https://github.com/Divakarsingaravelu",
     resumeFileName: "Divakar_Singaravelu_Resume.pdf",
-    location: "Chennai, India",
+    location: "Tiruvannamalai, Tamil Nadu, 604601",
+    summary: "Detail-oriented Software Developer pursuing a B.E. in Computer Science Engineering with a strong foundation in building responsive, full-stack web applications. Proficient in JavaScript, React, TypeScript, Python, Java, Node.js, REST API integration, and SQL/SQLite databases. Proven ability to deliver optimized, user-centric software solutions through two industry internships, hands-on technical projects, NxtWave CCBP 4.0 academy training, and competitive hackathon participation.",
     interests: [
-      "Full Stack Development",
-      "AI & Machine Learning",
-      "System Architecture",
-      "Problem Solving"
+      "Full Stack Web Development",
+      "REST API Integration",
+      "Relational Database Schema Design",
+      "Rapid Problem-Solving"
     ]
   },
 
+  internships: [
+    {
+      role: "Web Development Intern",
+      company: "Happieloop Technologies",
+      period: "Oct 2026 - Nov 2026",
+      dates: "9 Oct 2026 - 8 Nov 2026",
+      certificateId: "HP2610500",
+      description: "Completed a Web Development internship. Applied web development fundamentals to build and refine responsive interfaces and web application components.",
+      highlights: [
+        "Completed a Web Development internship (9 Oct 2026 - 8 Nov 2026)",
+        "Certificate ID: HP2610500",
+        "Applied web development fundamentals to build and refine responsive interfaces and web application components"
+      ]
+    },
+    {
+      role: "Full Stack Development Intern",
+      company: "Thiranex",
+      period: "Sep 2026 - Oct 2026",
+      dates: "6 Sep 2026 - 5 Oct 2026",
+      certificateId: "THX-SEP0626-293",
+      description: "Successfully completed a Full Stack Development internship. Gained hands-on experience across frontend, backend, and database integration in full-stack web development.",
+      highlights: [
+        "Successfully completed a Full Stack Development internship (6 Sep 2026 - 5 Oct 2026)",
+        "Certificate ID: THX-SEP0626-293",
+        "Gained hands-on experience across frontend, backend, and database integration in full-stack web development"
+      ]
+    }
+  ] as InternshipItem[],
+
   aboutPillars: [
     {
-      title: "Development",
-      description: "Building web applications with React, TypeScript, Tailwind CSS on the frontend and Node.js, Express, SQL on the backend.",
+      title: "Full Stack Development",
+      description: "Building responsive web applications using React 18, TypeScript, Tailwind CSS, TanStack Query, and Node.js with REST APIs.",
       icon: "Code2",
       gradient: "from-cyan-500/20 to-blue-600/20",
       accent: "#00F0FF"
     },
     {
-      title: "Problem Solving",
-      description: "Writing code in Java, Python, and C. Studying data structures, algorithms, and object-oriented programming.",
+      title: "Industry Internships",
+      description: "Two internships: Web Development at Happieloop Technologies and Full Stack Development at Thiranex, working on live components and databases.",
       icon: "Cpu",
       gradient: "from-blue-500/20 to-cyan-600/20",
       accent: "#3B82F6"
     },
     {
-      title: "Continuous Learning",
-      description: "Completed NxtWave CCBP full-stack training. Currently studying speech emotion recognition with Python and neural networks.",
+      title: "Data & Systems",
+      description: "Relational database schema design, Row-Level Security, SQL/SQLite queries, and competitive hackathon problem-solving.",
       icon: "Sparkles",
       gradient: "from-cyan-500/20 to-blue-500/20",
       accent: "#00B8D4"
@@ -113,226 +156,165 @@ export const PORTFOLIO_DATA = {
 
   education: [
     {
-      degree: "Bachelor of Engineering in Computer Science and Engineering",
-      institution: "Adhi College of Engineering and Technology",
-      affiliate: "Affiliated with Anna University",
+      degree: "B.E. – Computer Science Engineering",
+      institution: "Adhi College of Engineering and Technology, Anna University, Kanchipuram",
+      affiliate: "Anna University",
       period: "2023 - 2027",
-      status: "Final-year CSE Undergraduate",
-      location: "Kanchipuram / Chennai, Tamil Nadu",
+      status: "CGPA: 7.5",
+      location: "Kanchipuram, Tamil Nadu",
       description: "Coursework covers data structures, algorithms, database management, computer networks, software engineering, and operating systems.",
       highlights: [
-        "Focus on software engineering, object-oriented programming, and databases",
-        "Project work, workshops, and technical events",
-        "Building full-stack web apps and studying machine learning"
+        "CGPA: 7.5",
+        "Adhi College of Engineering and Technology, Anna University",
+        "Competitive hackathon participation and technical projects"
       ]
     },
     {
-      degree: "Full Stack Software Development Program",
-      institution: "NxtWave CCBP 4.0 Academy",
-      period: "Intensive Tech Track",
-      status: "Professional Skill Program",
-      description: "Hands-on training in frontend and backend development with JavaScript, React, Node.js, and SQL databases.",
+      degree: "Intermediate (MBIPC)",
+      institution: "Government Boys Higher Secondary School, Tiruvannamalai",
+      affiliate: "State Board",
+      period: "2020 - 2023",
+      status: "72%",
+      location: "Tiruvannamalai, Tamil Nadu",
+      description: "Completed higher secondary education in Mathematics, Biology, Physics, and Chemistry (MBIPC) with 72% aggregate.",
       highlights: [
-        "Web application architecture and asynchronous programming",
-        "React.js, responsive design, and CSS frameworks",
-        "Backend REST APIs with Node.js, Express.js, and SQL/SQLite"
+        "72% aggregate score",
+        "Government Boys Higher Secondary School, Tiruvannamalai"
+      ]
+    },
+    {
+      degree: "CCBP 4.0 Academy Training",
+      institution: "NxtWave CCBP 4.0 Academy",
+      affiliate: "Professional Skill Program",
+      period: "2025 - 2026",
+      status: "Certified",
+      location: "Online",
+      description: "Hands-on software development training covering responsive web design, dynamic web applications, and programming foundations.",
+      highlights: [
+        "Responsive Web Design Using Flexbox (Jun 2026)",
+        "Build Your Own Dynamic Web Application (Mar 2026)",
+        "Programming Foundations with Python (Nov 2025)"
       ]
     }
   ] as EducationItem[],
 
   skills: [
     // Languages
-    { name: "Java", category: "Languages", icon: "Coffee", featured: true },
+    { name: "JavaScript", category: "Languages", icon: "Code", featured: true },
+    { name: "TypeScript", category: "Languages", icon: "FileCode", featured: true },
     { name: "Python", category: "Languages", icon: "Terminal", featured: true },
+    { name: "Java", category: "Languages", icon: "Coffee", featured: true },
     { name: "C", category: "Languages", icon: "Cpu", featured: true },
+    { name: "SQL", category: "Languages", icon: "Database", featured: true },
 
     // Frontend
-    { name: "React.js", category: "Frontend", icon: "Atom", featured: true },
-    { name: "TypeScript", category: "Frontend", icon: "FileCode", featured: true },
-    { name: "JavaScript (ES6+)", category: "Frontend", icon: "Code", featured: true },
+    { name: "React 18", category: "Frontend", icon: "Atom", featured: true },
+    { name: "HTML", category: "Frontend", icon: "Layout", featured: true },
+    { name: "CSS", category: "Frontend", icon: "Layers", featured: true },
+    { name: "Bootstrap", category: "Frontend", icon: "Box", featured: true },
     { name: "Tailwind CSS", category: "Frontend", icon: "Palette", featured: true },
-    { name: "HTML5", category: "Frontend", icon: "Layout", featured: true },
-    { name: "CSS3", category: "Frontend", icon: "Layers", featured: true },
-    { name: "Bootstrap", category: "Frontend", icon: "Box", featured: false },
-    { name: "Vite", category: "Frontend", icon: "Zap", featured: true },
-    { name: "Responsive Web Design", category: "Frontend", icon: "Smartphone", featured: true },
+    { name: "TanStack Query", category: "Frontend", icon: "Zap", featured: true },
+    { name: "Responsive Web Design (Flexbox)", category: "Frontend", icon: "Smartphone", featured: true },
 
     // Backend & DB
     { name: "Node.js", category: "Backend & DB", icon: "Server", featured: true },
-    { name: "Express.js", category: "Backend & DB", icon: "Boxes", featured: true },
-    { name: "REST APIs", category: "Backend & DB", icon: "Network", featured: true },
-    { name: "SQL", category: "Backend & DB", icon: "Database", featured: true },
+    { name: "REST API Integration", category: "Backend & DB", icon: "Network", featured: true },
+    { name: "Fetch API", category: "Backend & DB", icon: "Network", featured: true },
     { name: "SQLite", category: "Backend & DB", icon: "HardDrive", featured: true },
+    { name: "Relational Database Schema Design", category: "Backend & DB", icon: "Database", featured: true },
+    { name: "Row-Level Security", category: "Backend & DB", icon: "Boxes", featured: true },
 
     // Tools & Workflow
     { name: "Git", category: "Tools & Workflow", icon: "GitBranch", featured: true },
     { name: "GitHub", category: "Tools & Workflow", icon: "Github", featured: true },
     { name: "Visual Studio Code", category: "Tools & Workflow", icon: "Laptop", featured: true },
-    { name: "Git Bash", category: "Tools & Workflow", icon: "TerminalSquare", featured: false },
-    { name: "NetBeans", category: "Tools & Workflow", icon: "AppWindow", featured: false },
-    { name: "Command Prompt & PowerShell", category: "Tools & Workflow", icon: "Terminal", featured: false },
-    { name: "npm", category: "Tools & Workflow", icon: "Package", featured: true }
+    { name: "npm", category: "Tools & Workflow", icon: "Package", featured: true },
+
+    // Soft Skills
+    { name: "Rapid Problem-Solving", category: "Soft Skills", icon: "Zap", featured: true },
+    { name: "Cross-functional Collaboration", category: "Soft Skills", icon: "Boxes", featured: true },
+    { name: "Time Management", category: "Soft Skills", icon: "Boxes", featured: true },
+    { name: "Adaptability", category: "Soft Skills", icon: "Boxes", featured: true }
   ] as SkillItem[],
 
   projects: [
     {
       id: "menubase-saas",
-      title: "MenuBase: Restaurant Menu SaaS",
-      shortDescription: "A full-stack SaaS platform that lets restaurants manage and sync their digital menus across multiple food delivery platforms from one dashboard.",
-      fullDescription: "MenuBase solves the problem of updating items, prices, and availability across multiple delivery portals separately. Built with React, TypeScript, and Tailwind CSS, it provides a dashboard for menu cataloging, real-time status toggling, and structured API endpoints for syncing with delivery platforms.",
+      title: "MenuBase – Multi-Platform Menu Management SaaS",
+      shortDescription: "Full-stack SaaS platform centralizing menu, pricing, and stock management for cloud kitchens.",
+      fullDescription: "Built a full-stack SaaS platform centralizing menu, pricing, and stock management for cloud kitchens, eliminating manual re-entry and reducing sync errors. Developed the frontend with React 18, TypeScript, and Tailwind CSS, using TanStack Query for server-state management with instant user feedback. Designed a relational database schema with Row-Level Security on every table and integrated an AI-powered description generator to speed up menu creation.",
       category: "Full Stack",
-      technologies: ["React.js", "Vite", "TypeScript", "Tailwind CSS", "REST APIs", "Node.js"],
+      technologies: ["React 18", "TypeScript", "Tailwind CSS", "TanStack Query", "Row-Level Security", "Relational Database"],
       keyFeatures: [
-        "Centralized catalog for menu items and categories across delivery channels",
-        "Instant price and stock updates synced across connected platforms",
-        "Responsive glassmorphic dashboard for desktop and tablet",
-        "Modular state management for real-time synchronization"
+        "Built a full-stack SaaS platform centralizing menu, pricing, and stock management for cloud kitchens, eliminating manual re-entry and reducing sync errors.",
+        "Developed the frontend with React 18, TypeScript, and Tailwind CSS, using TanStack Query for server-state management with instant user feedback.",
+        "Designed a relational database schema with Row-Level Security on every table and integrated an AI-powered description generator to speed up menu creation."
       ],
-      status: "In Progress",
-      githubUrl: "https://github.com/divakarsingaravelu",
+      status: "Completed",
+      githubUrl: "https://github.com/Divakarsingaravelu",
       liveUrl: undefined,
       imagePlaceholderGradient: "from-cyan-600/30 via-blue-600/20 to-blue-800/30",
       featured: true,
       bentoSpan: "col-span-12 lg:col-span-8",
       accentGlow: "rgba(0, 240, 255, 0.25)",
       metrics: [
-        { label: "Sync Engine", value: "Multi-Platform" },
-        { label: "Architecture", value: "SaaS Multi-Tenant" },
-        { label: "Target Outlets", value: "F&B Portals" }
+        { label: "Type", value: "Personal Project" },
+        { label: "Frontend", value: "React 18 + TS" },
+        { label: "Security", value: "Row-Level (RLS)" }
       ],
       architectureLayers: [
-        { layer: "Presentation", details: "React 18 + TypeScript with Tailwind CSS" },
-        { layer: "State Engine", details: "Centralized catalog state with optimistic UI updates" },
-        { layer: "Integration", details: "RESTful endpoints for delivery platform webhook syndication" }
+        { layer: "Presentation", details: "React 18, TypeScript, and Tailwind CSS with instant user feedback" },
+        { layer: "State Engine", details: "TanStack Query for server-state caching and synchronization" },
+        { layer: "Data & Security", details: "Relational database schema with Row-Level Security on every table" }
       ]
     },
     {
-      id: "dynamic-web-apps-suite",
-      title: "Dynamic Web Applications Suite",
-      shortDescription: "A collection of interactive web apps built during NxtWave CCBP training, covering async APIs, DOM manipulation, and responsive layouts.",
-      fullDescription: "Built during the NxtWave CCBP 4.0 program. These projects demonstrate async fetch requests, local storage, client-side filtering, and mobile-first responsive layouts using HTML, CSS, JavaScript, and Bootstrap.",
+      id: "wikipedia-search-app",
+      title: "Wikipedia Search Application",
+      shortDescription: "Dynamic Wikipedia search application using asynchronous JavaScript (Fetch API) to execute real-time REST API GET requests.",
+      fullDescription: "Engineered a dynamic Wikipedia search application using asynchronous JavaScript (Fetch API) to execute real-time REST API GET requests. Designed an intuitive, mobile-first responsive UI with HTML, CSS, and Bootstrap, optimizing layout and load performance for fast data retrieval.",
       category: "Frontend",
-      technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "Bootstrap"],
+      technologies: ["JavaScript (ES6+)", "Fetch API", "REST APIs", "HTML", "CSS", "Bootstrap"],
       keyFeatures: [
-        "Async REST API calls with loaders and error handling",
-        "Search, filtering, and client-side pagination",
-        "Persistent user preferences via LocalStorage",
-        "Responsive layouts tested across viewports"
+        "Engineered a dynamic Wikipedia search application using asynchronous JavaScript (Fetch API) to execute real-time REST API GET requests.",
+        "Designed an intuitive, mobile-first responsive UI with HTML, CSS, and Bootstrap, optimizing layout and load performance for fast data retrieval."
       ],
       status: "Completed",
-      githubUrl: "https://github.com/divakarsingaravelu",
-      liveUrl: undefined,
-      imagePlaceholderGradient: "from-amber-600/30 via-orange-600/20 to-cyan-600/20",
-      featured: false,
-      bentoSpan: "col-span-12 lg:col-span-4",
-      accentGlow: "rgba(245, 158, 11, 0.25)",
-      metrics: [
-        { label: "App Count", value: "Multiple Modules" },
-        { label: "Protocols", value: "REST / Fetch" },
-        { label: "DOM State", value: "Event-driven" }
-      ]
-    },
-    {
-      id: "hotel-management-system",
-      title: "Hotel Management System Architecture",
-      shortDescription: "Object-oriented design model for hospitality workflows: booking states, database schemas, and UML diagrams built with Argo-UML.",
-      fullDescription: "A software engineering design project using UML methodologies (Argo-UML). Covers class diagrams, sequence diagrams for reservation check-in/check-out, entity-relationship structures, and component interactions for hotel software.",
-      category: "System Architecture",
-      technologies: ["Object-Oriented Analysis", "UML Modeling", "Argo-UML", "Database Design"],
-      keyFeatures: [
-        "Class diagrams, use case diagrams, and sequence flows",
-        "State transition modeling for room allocation and billing",
-        "Normalized relational database schema",
-        "Modular architecture following SOLID principles"
-      ],
-      status: "Architecture / Concept",
-      githubUrl: "https://github.com/divakarsingaravelu",
-      liveUrl: undefined,
-      imagePlaceholderGradient: "from-emerald-600/30 via-teal-600/20 to-blue-700/20",
-      featured: false,
-      bentoSpan: "col-span-12 lg:col-span-5",
-      accentGlow: "rgba(16, 185, 129, 0.25)",
-      metrics: [
-        { label: "Design Pattern", value: "SOLID / OOP" },
-        { label: "Tooling", value: "Argo-UML" },
-        { label: "Schema", value: "Normalized 3NF" }
-      ]
-    },
-    {
-      id: "speech-emotion-recognition",
-      title: "Speech Emotion Recognition (SER)",
-      shortDescription: "Final-year project: a machine learning system that classifies emotions from speech audio using MFCCs and neural networks.",
-      fullDescription: "This project extracts acoustic features (Mel-Frequency Cepstral Coefficients, chroma, spectral contrast) from speech audio datasets like RAVDESS and trains neural network models to predict emotional states such as happy, sad, neutral, and angry.",
-      category: "AI / Machine Learning",
-      technologies: ["Python", "Librosa", "Audio Processing", "Machine Learning", "Neural Networks"],
-      keyFeatures: [
-        "MFCC and spectral feature extraction from audio",
-        "Neural network classifier for multiple emotion categories",
-        "Confusion matrix and accuracy evaluation",
-        "Final-year capstone research project"
-      ],
-      status: "In Progress",
-      githubUrl: "https://github.com/divakarsingaravelu",
+      githubUrl: "https://github.com/Divakarsingaravelu",
       liveUrl: undefined,
       imagePlaceholderGradient: "from-blue-600/30 via-cyan-600/20 to-blue-800/30",
-      featured: false,
-      bentoSpan: "col-span-12 lg:col-span-7",
+      featured: true,
+      bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(59, 130, 246, 0.25)",
       metrics: [
-        { label: "Domain", value: "Audio Signal Processing" },
-        { label: "Feature Extraction", value: "MFCC / Chroma" },
-        { label: "Capstone", value: "Final-year CSE" }
-      ]
-    },
-    {
-      id: "hostel-outpass-management",
-      title: "Hostel Outpass Management System",
-      shortDescription: "A web app concept for digitizing hostel outpass requests with role-based dashboards for students, wardens, and gate security.",
-      fullDescription: "Replaces paper-based outpass slips in educational institutions. Students submit digital leave requests, wardens review and approve them, and gate security verifies clearance via status codes. Built with React, Node.js, Express, SQLite, and Tailwind CSS.",
-      category: "Full Stack",
-      technologies: ["React.js", "Node.js", "Express.js", "SQLite", "Tailwind CSS"],
-      keyFeatures: [
-        "Role-based dashboards: Student, Warden, Gate Security",
-        "Request lifecycle: Pending, Approved, Rejected, Out-of-Campus",
-        "Automated departure and entry timestamps",
-        "Exportable audit logs"
-      ],
-      status: "Architecture / Concept",
-      githubUrl: "https://github.com/Divakarsingaravelu/hostel-outpass-system",
-      liveUrl: undefined,
-      imagePlaceholderGradient: "from-blue-600/30 via-cyan-600/20 to-blue-700/20",
-      featured: false,
-      bentoSpan: "col-span-12 lg:col-span-6",
-      accentGlow: "rgba(59, 130, 246, 0.25)",
-      metrics: [
-        { label: "User Roles", value: "Student, Warden, Gate" },
-        { label: "Database", value: "SQLite" },
-        { label: "Clearance", value: "Instant Verification" }
+        { label: "Type", value: "Academic Project" },
+        { label: "Protocol", value: "REST / Fetch API" },
+        { label: "Design", value: "Mobile-First" }
       ]
     },
     {
       id: "personal-portfolio-zerog",
-      title: "Zero-Gravity Portfolio",
-      shortDescription: "This portfolio site, built with React, TypeScript, Tailwind CSS, and Framer Motion. Includes a physics toggle and interactive starfield.",
-      fullDescription: "This website. It uses an interactive starfield canvas, physics toggling (zero-G float vs gravity drag), 3D tilt card interactions, certificate modals, and responsive design. All data is loaded from a central config file.",
+      title: "Zero-Gravity Developer Portfolio",
+      shortDescription: "Personal portfolio built with React 18, TypeScript, and Tailwind CSS featuring interactive physics and 8-point spacing.",
+      fullDescription: "Built with React 18, TypeScript, and Tailwind CSS. Features an interactive starfield canvas, zero-G / gravity physics toggle, 8-point spacing system, certificate modal viewers, and verified factual resume data.",
       category: "Frontend",
-      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      technologies: ["React 18", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
       keyFeatures: [
-        "Zero-G / Gravity physics toggle with floating cards",
-        "Interactive starfield that reacts to cursor position",
-        "Single config file for all projects, skills, and certifications",
-        "Verified data only, no simulated stats"
+        "Zero-G / gravity physics toggle with floating cards",
+        "Interactive starfield reacting to cursor movement",
+        "Strict 8-point spacing system and solid navy/blue color scheme",
+        "Verified resume facts and downloadable PDF"
       ],
       status: "Completed",
       githubUrl: "https://github.com/Divakarsingaravelu/portfolio-zerog",
       liveUrl: "#",
       imagePlaceholderGradient: "from-cyan-500/30 via-blue-600/20 to-blue-800/30",
       featured: false,
-      bentoSpan: "col-span-12 lg:col-span-6",
+      bentoSpan: "col-span-12 lg:col-span-12",
       accentGlow: "rgba(0, 240, 255, 0.25)",
       metrics: [
         { label: "Framerate", value: "60 FPS" },
-        { label: "Physics", value: "Interactive Zero-G" },
+        { label: "Spacing", value: "8-point System" },
         { label: "Type Safety", value: "100% TypeScript" }
       ]
     }
@@ -340,78 +322,73 @@ export const PORTFOLIO_DATA = {
 
   certifications: [
     {
-      id: "nxtwave-dynamic-web",
-      title: "Build Your Own Dynamic Web Application",
-      issuer: "NxtWave CCBP 4.0 Academy",
-      date: "Verified Completion",
-      category: "Web Development",
-      badge: "Flagship Credential",
-      bentoSpan: "col-span-12 lg:col-span-7",
+      id: "make-ai-workflows",
+      title: "AI-Powered Workflows",
+      issuer: "Make.com",
+      date: "Feb 2026",
+      category: "Emerging Tech",
+      badge: "AI Automation",
+      bentoSpan: "col-span-12 lg:col-span-6",
       accentGlow: "rgba(0, 240, 255, 0.25)",
       highlights: [
-        "Async JavaScript, event loop, Fetch APIs, and JSON data",
-        "DOM manipulation and state synchronization",
-        "Form validation and UI state handling"
-      ]
-    },
-    {
-      id: "java-programming-cert",
-      title: "Java Programming Certification",
-      issuer: "Recognized Technical Academy",
-      date: "Verified Coursework",
-      category: "Programming",
-      badge: "Core Engineering",
-      bentoSpan: "col-span-12 lg:col-span-5",
-      accentGlow: "rgba(59, 130, 246, 0.25)",
-      highlights: [
-        "OOP principles: encapsulation, inheritance, polymorphism",
-        "Exception handling, collections, and multithreading",
-        "Data structure implementation and problem solving"
+        "AI-powered workflow design and automated API integration",
+        "Connecting web services with automated triggers and data mapping"
       ]
     },
     {
       id: "iot-workshop-cert",
       title: "Internet of Things (IoT) Two-Day Workshop",
       issuer: "Technical Institution Workshop",
-      date: "Hands-on Workshop",
+      date: "Two-Day Workshop",
       category: "Emerging Tech",
-      badge: "Hardware & Cloud",
+      badge: "Hardware & IoT",
+      bentoSpan: "col-span-12 lg:col-span-6",
+      accentGlow: "rgba(59, 130, 246, 0.25)",
+      highlights: [
+        "Sensor data acquisition and microcontroller programming",
+        "IoT communication protocols and hardware integration"
+      ]
+    },
+    {
+      id: "nxtwave-flexbox",
+      title: "Responsive Web Design Using Flexbox",
+      issuer: "NxtWave CCBP 4.0 Academy",
+      date: "Jun 2026",
+      category: "Web Development",
+      badge: "Responsive Design",
       bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(0, 184, 212, 0.25)",
       highlights: [
-        "Sensor data acquisition, microcontroller programming, and actuators",
-        "IoT communication protocols (MQTT, HTTP) and cloud dashboards",
-        "Hardware-to-software integration and prototyping"
+        "CSS Flexbox layout architecture and fluid responsive design",
+        "Mobile-first responsive web design principles"
       ]
     },
     {
-      id: "python-foundations",
+      id: "nxtwave-dynamic-web",
+      title: "Build Your Own Dynamic Web Application",
+      issuer: "NxtWave CCBP 4.0 Academy",
+      date: "Mar 2026",
+      category: "Web Development",
+      badge: "Dynamic Web Apps",
+      bentoSpan: "col-span-12 lg:col-span-4",
+      accentGlow: "rgba(0, 240, 255, 0.25)",
+      highlights: [
+        "Asynchronous JavaScript, event loop, Fetch APIs, and JSON data",
+        "DOM manipulation, form validation, and client-side UI states"
+      ]
+    },
+    {
+      id: "nxtwave-python-foundations",
       title: "Programming Foundations with Python",
-      issuer: "Verified Learning Program",
-      date: "Certified",
+      issuer: "NxtWave CCBP 4.0 Academy",
+      date: "Nov 2025",
       category: "Programming",
-      badge: "ML Baseline",
+      badge: "Python Foundations",
       bentoSpan: "col-span-12 lg:col-span-4",
       accentGlow: "rgba(16, 185, 129, 0.25)",
       highlights: [
-        "Core syntax, data types, list comprehensions, and functional constructs",
-        "Modular programming, file I/O, and standard libraries",
-        "Foundation for machine learning and scripting"
-      ]
-    },
-    {
-      id: "javascript-essentials",
-      title: "JavaScript Essentials & Flexbox",
-      issuer: "Web Engineering Certification",
-      date: "Certified",
-      category: "Web Development",
-      badge: "Frontend",
-      bentoSpan: "col-span-12 lg:col-span-4",
-      accentGlow: "rgba(59, 130, 246, 0.25)",
-      highlights: [
-        "ES6+ features: Promises, async/await, destructuring, scope chains",
-        "Browser APIs, LocalStorage, and event delegation",
-        "CSS Flexbox, CSS Grid, and fluid typography"
+        "Python syntax, data types, and algorithmic problem solving",
+        "Modular programming, functions, and standard libraries"
       ]
     }
   ] as Certification[]
