@@ -42,54 +42,54 @@ export const Projects: React.FC = () => {
         };
       case 'In Progress':
         return {
-          label: 'In Active Development',
+          label: 'In Progress',
           classes: 'bg-amber-950/70 text-amber-300 border-amber-500/40 shadow-[0_0_12px_rgba(245,158,11,0.2)]'
         };
       case 'Architecture / Concept':
         return {
-          label: 'System Architecture',
+          label: 'Concept',
           classes: 'bg-cyan-950/70 text-cyan-glow border-cyan-500/40 shadow-[0_0_12px_rgba(0,240,255,0.2)]'
         };
     }
   };
 
   return (
-    <section id="projects" className="relative py-28 scroll-mt-20">
+    <section id="projects" className="relative py-[var(--space-12)] scroll-mt-[var(--space-3)]">
       {/* Background ambient lighting */}
-      <div className="aurora-cyan top-1/4 -left-20 opacity-30 pointer-events-none" />
-      <div className="aurora-violet bottom-1/4 -right-20 opacity-30 pointer-events-none" />
+      <div className="aurora-cyan top-1/4 -left-[var(--space-3)] opacity-30 pointer-events-none" />
+      <div className="aurora-blue bottom-1/4 -right-[var(--space-3)] opacity-30 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-[var(--space-2)] sm:px-[var(--space-3)] lg:px-[var(--space-4)] relative z-10">
         
-        {/* Section Header with Refined Typography */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center text-center mb-16 space-y-4"
+          className="flex flex-col items-center text-center mb-[var(--space-8)] gap-[var(--space-2)]"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-space-800/80 border border-cyan-500/30 text-cyan-glow text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+          <div className="inline-flex items-center gap-[var(--space-half)] px-[var(--space-2)] py-[var(--space-half)] rounded-full bg-space-800/80 border border-cyan-500/30 text-cyan-glow text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(0,240,255,0.15)]">
             <Layers className="w-3.5 h-3.5" />
-            <span>ASYMMETRIC BENTO SHOWCASE</span>
+            <span>PROJECTS</span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
-            Featured <span className="text-gradient-cyan">Engineering</span>
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.125]">
+            Projects
           </h2>
 
-          <p className="text-slate-400 font-mono text-xs sm:text-sm max-w-2xl leading-relaxed">
-            High-impact web architectures, multi-tenant SaaS platforms, audio deep learning models, and system designs.
+          <p className="text-slate-400 font-mono text-xs sm:text-sm max-w-2xl leading-[24px]">
+            Web applications, system designs, and machine learning work.
           </p>
         </motion.div>
 
-        {/* Filter Category Tabs with Magnetic Interaction */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Filter Category Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-[var(--space-1)] mb-[var(--space-6)]">
           {categories.map((cat) => (
             <Magnetic key={cat} strength={0.2}>
               <button
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-mono transition-all duration-200 border ${
+                className={`min-h-[32px] px-[var(--space-2)] py-[var(--space-1)] rounded-full text-xs font-mono transition-all duration-200 border ${
                   activeCategory === cat
                     ? 'bg-cyan-950/80 border-cyan-500/60 text-cyan-glow shadow-[0_0_20px_rgba(0,240,255,0.3)] font-semibold'
                     : 'bg-space-800/60 border-white/5 text-slate-400 hover:text-white hover:border-white/20'
@@ -101,10 +101,10 @@ export const Projects: React.FC = () => {
           ))}
         </div>
 
-        {/* Asymmetric Bento Grid Container */}
+        {/* Bento Grid */}
         <motion.div
           layout
-          className="grid grid-cols-12 gap-6"
+          className="grid grid-cols-12 gap-[var(--space-3)]"
         >
           <AnimatePresence>
             {filteredProjects.map((project, index) => {
@@ -128,52 +128,52 @@ export const Projects: React.FC = () => {
                     floatDelay={index * 0.3}
                     className="h-full rounded-3xl glass-card border border-white/10 hover:border-cyan-500/40 bg-space-950/85 backdrop-blur-xl flex flex-col justify-between group shadow-xl transition-all duration-300"
                   >
-                    {/* Top Decorative Ambient Bar */}
+                    {/* Top Decorative Bar */}
                     <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent group-hover:via-cyan-glow transition-all duration-500" />
 
-                    <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                    <div className="p-[var(--space-3)] sm:p-[var(--space-4)] flex-1 flex flex-col justify-between gap-[var(--space-3)]">
                       
-                      {/* Card Header Row: Monospace Tags & Status */}
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div className="flex items-center gap-2">
-                          <span className={`px-2.5 py-1 rounded-full text-[11px] font-mono border ${statusInfo.classes}`}>
+                      {/* Header Row */}
+                      <div className="flex flex-wrap items-center justify-between gap-[var(--space-1)]">
+                        <div className="flex items-center gap-[var(--space-1)]">
+                          <span className={`px-[var(--space-1)] py-[var(--space-half)] rounded-full text-xs font-mono border ${statusInfo.classes}`}>
                             {statusInfo.label}
                           </span>
                           {isFlagship && (
-                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-cyan-950/80 text-cyan-glow border border-cyan-500/50">
+                            <span className="inline-flex items-center gap-[var(--space-half)] px-[var(--space-1)] py-[var(--space-half)] rounded-full text-xs font-mono bg-cyan-950/80 text-cyan-glow border border-cyan-500/50">
                               <Flame className="w-3 h-3 text-cyan-glow animate-pulse" />
-                              Flagship Project
+                              Flagship
                             </span>
                           )}
                         </div>
 
-                        <span className="text-[11px] font-mono text-slate-400 bg-space-900/90 px-2.5 py-1 rounded-lg border border-white/5">
+                        <span className="text-xs font-mono text-slate-400 bg-space-900/90 px-[var(--space-1)] py-[var(--space-half)] rounded-lg border border-white/5">
                           {project.category}
                         </span>
                       </div>
 
-                      {/* Main Title & Short Description */}
-                      <div className="space-y-3 cursor-pointer" onClick={() => setSelectedProject(project)}>
-                        <h3 className={`font-bold text-white group-hover:text-cyan-glow transition-colors tracking-tight leading-tight ${
+                      {/* Title & Description */}
+                      <div className="space-y-[var(--space-1)] cursor-pointer" onClick={() => setSelectedProject(project)}>
+                        <h3 className={`font-bold text-white group-hover:text-cyan-glow transition-colors tracking-tight leading-[32px] ${
                           isFlagship ? 'text-2xl sm:text-3xl lg:text-4xl' : 'text-xl sm:text-2xl'
                         }`}>
                           {project.title}
                         </h3>
 
-                        <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        <p className="text-slate-300 text-xs sm:text-sm leading-[24px]">
                           {project.shortDescription}
                         </p>
                       </div>
 
-                      {/* Flagship Exclusive: Multi-Platform Sync Preview & Metrics */}
+                      {/* Flagship Architecture Preview */}
                       {isFlagship && project.architectureLayers && (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4 rounded-2xl bg-space-900/80 border border-white/5 font-mono text-xs">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--space-1)] p-[var(--space-2)] rounded-2xl bg-space-900/80 border border-white/5 font-mono text-xs">
                           {project.architectureLayers.map((layer, i) => (
-                            <div key={i} className="space-y-1">
-                              <span className="text-cyan-glow text-[11px] uppercase tracking-wider block">
+                            <div key={i} className="space-y-[var(--space-half)]">
+                              <span className="text-cyan-glow text-xs uppercase tracking-wider block">
                                 0{i + 1}. {layer.layer}
                               </span>
-                              <p className="text-slate-400 text-[11px] leading-snug">
+                              <p className="text-slate-400 text-xs leading-[16px]">
                                 {layer.details}
                               </p>
                             </div>
@@ -181,25 +181,25 @@ export const Projects: React.FC = () => {
                         </div>
                       )}
 
-                      {/* Key Features List */}
-                      <div className="space-y-2">
+                      {/* Key Features */}
+                      <div className="space-y-[var(--space-1)]">
                         {project.keyFeatures.slice(0, isFlagship ? 3 : 2).map((feat, i) => (
-                          <div key={i} className="flex items-start gap-2 text-xs text-slate-300">
+                          <div key={i} className="flex items-start gap-[var(--space-half)] text-xs text-slate-300">
                             <CheckCircle2 className="w-3.5 h-3.5 text-cyan-glow shrink-0 mt-0.5" />
                             <span className="line-clamp-1">{feat}</span>
                           </div>
                         ))}
                       </div>
 
-                      {/* Metrics Pill Bar (if present) */}
+                      {/* Metrics */}
                       {project.metrics && (
-                        <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/5 text-center">
+                        <div className="grid grid-cols-3 gap-[var(--space-1)] pt-[var(--space-1)] border-t border-white/5 text-center">
                           {project.metrics.map((m, i) => (
-                            <div key={i} className="p-2 rounded-xl bg-space-900/60 border border-white/5">
+                            <div key={i} className="p-[var(--space-1)] rounded-xl bg-space-900/60 border border-white/5">
                               <div className="font-mono text-xs font-bold text-white truncate">
                                 {m.value}
                               </div>
-                              <div className="font-mono text-[10px] text-slate-400 truncate mt-0.5">
+                              <div className="font-mono text-xs text-slate-400 truncate mt-[var(--space-half)]">
                                 {m.label}
                               </div>
                             </div>
@@ -208,11 +208,11 @@ export const Projects: React.FC = () => {
                       )}
 
                       {/* Tech Stack Pills */}
-                      <div className="flex flex-wrap gap-1.5 pt-2">
+                      <div className="flex flex-wrap gap-[var(--space-1)] pt-[var(--space-1)]">
                         {project.technologies.map((t) => (
                           <span
                             key={t}
-                            className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-space-900 text-cyan-300 border border-white/5 hover:border-cyan-500/30 transition-colors"
+                            className="px-[var(--space-1)] py-[var(--space-half)] rounded-md text-xs font-mono bg-space-900 text-cyan-300 border border-white/5 hover:border-cyan-500/30 transition-colors"
                           >
                             {t}
                           </span>
@@ -221,26 +221,26 @@ export const Projects: React.FC = () => {
 
                     </div>
 
-                    {/* Bento Card Footer with Action Triggers */}
-                    <div className="px-6 sm:px-8 py-4 bg-space-950/70 border-t border-white/5 flex items-center justify-between gap-3">
+                    {/* Card Footer */}
+                    <div className="px-[var(--space-3)] sm:px-[var(--space-4)] py-[var(--space-2)] bg-space-950/70 border-t border-white/5 flex items-center justify-between gap-[var(--space-1)]">
                       <Magnetic strength={0.2}>
                         <button
                           onClick={() => setSelectedProject(project)}
-                          className="text-xs font-mono text-cyan-glow hover:text-white flex items-center gap-1.5 transition-colors group/btn"
+                          className="min-h-[32px] text-xs font-mono text-cyan-glow hover:text-white flex items-center gap-[var(--space-half)] transition-colors group/btn"
                         >
-                          <span>Explore Architecture</span>
+                          <span>View Details</span>
                           <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                         </button>
                       </Magnetic>
 
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-[var(--space-1)]">
                         {project.githubUrl && (
                           <Magnetic strength={0.3}>
                             <a
                               href={project.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-xl bg-space-900 text-slate-300 hover:text-cyan-glow border border-white/5 hover:border-cyan-500/30 transition-all flex items-center justify-center"
+                              className="w-[32px] h-[32px] rounded-xl bg-space-900 text-slate-300 hover:text-cyan-glow border border-white/5 hover:border-cyan-500/30 transition-all flex items-center justify-center"
                               title="Source Repository"
                               aria-label="GitHub Repository"
                             >
@@ -255,7 +255,7 @@ export const Projects: React.FC = () => {
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-xl bg-cyan-950 text-cyan-glow border border-cyan-500/40 hover:bg-cyan-900 transition-all flex items-center justify-center"
+                              className="w-[32px] h-[32px] rounded-xl bg-cyan-950 text-cyan-glow border border-cyan-500/40 hover:bg-cyan-900 transition-all flex items-center justify-center"
                               title="Live Demo"
                               aria-label="Live Demo"
                             >
