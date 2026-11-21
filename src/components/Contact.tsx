@@ -106,11 +106,11 @@ export const Contact: React.FC = () => {
             className="lg:col-span-5 space-y-[var(--space-3)]"
           >
             
-            {/* Email Copy Box */}
+            {/* Email & Phone Copy Box */}
             <div className="glass-card rounded-2xl p-[var(--space-3)] sm:p-[var(--space-4)] border border-white/10 relative overflow-hidden bg-space-950/80 backdrop-blur-xl shadow-xl space-y-[var(--space-2)]">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono text-cyan-glow uppercase tracking-wider flex items-center gap-[var(--space-half)]">
-                  <Mail className="w-4 h-4" /> Direct Email
+                  <Mail className="w-4 h-4" /> Direct Contact
                 </span>
                 <span className="text-xs font-mono text-slate-400">Response &lt; 24h</span>
               </div>
@@ -146,9 +146,12 @@ export const Contact: React.FC = () => {
                 </Magnetic>
               </div>
 
-              <p className="text-xs text-slate-400 leading-[24px]">
-                Copy my email or use the contact form below.
-              </p>
+              <div className="p-[var(--space-2)] rounded-xl bg-space-900 border border-white/5 flex items-center justify-between text-xs font-mono text-slate-300">
+                <span className="text-slate-400">Phone:</span>
+                <a href={`tel:${personal.phone}`} className="text-cyan-glow hover:underline">
+                  +91 {personal.phone}
+                </a>
+              </div>
             </div>
 
             {/* Social Links */}
@@ -211,8 +214,8 @@ export const Contact: React.FC = () => {
             {/* Location */}
             <div className="p-[var(--space-2)] rounded-xl border border-white/5 bg-space-950/70 text-xs font-mono text-slate-400 space-y-[var(--space-half)] leading-[24px]">
               <div className="text-slate-300 font-semibold">Location & Availability:</div>
-              <div>Based in Chennai / Kanchipuram, Tamil Nadu, India.</div>
-              <div className="text-cyan-glow">Open for full-stack internship & graduate roles.</div>
+              <div>{personal.location}</div>
+              <div className="text-cyan-glow">Open for full-stack, web, and software developer roles.</div>
             </div>
 
           </motion.div>
